@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, synhighlighterunixshellscript, Forms, Controls,
-  Graphics, Dialogs, StdCtrls, Process, Menus,uglobal,uprocessos, Math;
+  Graphics, Dialogs, StdCtrls, Process, Menus, Buttons,uglobal,uprocessos, Math;
 
 type
 
@@ -23,6 +23,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    Memo1: TMemo;
 
     Memo2: TMemo;
   //  memo1 : TMemo;
@@ -86,6 +87,11 @@ end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
+     args.Create();
+     args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+
+     proxyconfig.Create(args);
+     proxyconfig.RunProcess();
   //self.runProcess();
   //self.runProces1('/home/danny/scripts/helena');
 

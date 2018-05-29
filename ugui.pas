@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls,uproxy,uglobal,uprocessos;
+  StdCtrls, Buttons,uproxy,uglobal,uprocessos;
 
 type
 
@@ -16,13 +16,25 @@ type
     Button1: TButton;
     Button2: TButton;
     CheckBox1: TCheckBox;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
     Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
     RadioGroup1: TRadioGroup;
+    procedure BitBtn1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
+    procedure Label4Click(Sender: TObject);
     procedure RadioGroup1Click(Sender: TObject);
+    procedure StaticText1Click(Sender: TObject);
   private
     commandlinestring:  String ;
     pst_call : uprocessos.RunnableScripts;
@@ -68,6 +80,11 @@ begin
 
 end;
 
+procedure TForm1.StaticText1Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.CheckBox1Change(Sender: TObject);
 begin
   writeln(Checkbox1.Checked);
@@ -78,10 +95,30 @@ begin
       uglobal.flag_root:= false;
 end;
 
+procedure TForm1.Image1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Image2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Image3Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   FProxy := TForm2.Create(nil);
   FProxy.ShowModal;
+
+end;
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+begin
 
 end;
 
@@ -102,6 +139,11 @@ begin
 end;
 
 procedure TForm1.Label2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Label4Click(Sender: TObject);
 begin
 
 end;

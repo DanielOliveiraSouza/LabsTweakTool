@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, synhighlighterunixshellscript, Forms, Controls,
-  Graphics, Dialogs, StdCtrls, Process, Menus,uglobal,uprocessos, Math;
+  Graphics, Dialogs, StdCtrls, Process, Menus, Buttons, ExtCtrls, uglobal,
+  uprocessos, Math;
 
 type
 
@@ -23,8 +24,8 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    Memo1: TMemo;
 
-    Memo2: TMemo;
   //  memo1 : TMemo;
     //memo2: TMemo ;
 

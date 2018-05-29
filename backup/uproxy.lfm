@@ -19,7 +19,7 @@ object Form2: TForm2
   end
   object Edit1: TEdit
     Left = 152
-    Height = 29
+    Height = 27
     Top = 67
     Width = 312
     OnChange = Edit1Change
@@ -36,7 +36,7 @@ object Form2: TForm2
   end
   object Edit2: TEdit
     Left = 152
-    Height = 29
+    Height = 27
     Top = 112
     Width = 312
     OnChange = Edit2Change
@@ -44,9 +44,9 @@ object Form2: TForm2
   end
   object CheckBox1: TCheckBox
     Left = 41
-    Height = 22
+    Height = 24
     Top = 167
-    Width = 125
+    Width = 127
     Caption = 'Proxy autenticado'
     OnChange = CheckBox1Change
     TabOrder = 2
@@ -62,7 +62,7 @@ object Form2: TForm2
   end
   object Edit3: TEdit
     Left = 208
-    Height = 29
+    Height = 27
     Top = 204
     Width = 192
     OnChange = Edit3Change
@@ -78,7 +78,7 @@ object Form2: TForm2
   end
   object Edit4: TEdit
     Left = 208
-    Height = 29
+    Height = 27
     Top = 252
     Width = 193
     EchoMode = emPassword
