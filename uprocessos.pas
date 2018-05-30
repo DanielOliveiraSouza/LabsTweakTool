@@ -40,10 +40,11 @@ Begin
   hprocess := TProcess.Create(nil);
   hprocess.Executable := '/bin/bash';
   while (i < (args.Count) ) do begin
-    writeln(args[i]);
+    write(args[i] + ' ');
     hprocess.Parameters.Add(args[i]);
     i := i  + 1;
    end;
+  writeln('');
    hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  //  Just what it says
    hprocess.Execute;         // Execute the command with parameters
  // end;
@@ -54,7 +55,7 @@ Begin
   streamout.SaveToFile('out.txt');
   failout.LoadFromStream(hprocess.Stderr);
   failout.SaveToFile('fail.txt');
-  writeln(hprocess.ExitCode);
+  //writeln(hprocess.ExitCode);
    Sleep(2000);
    hprocess.Free;
 end;

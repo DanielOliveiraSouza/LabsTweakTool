@@ -39,11 +39,12 @@ Begin
   DetectXTerm();
   hprocess := TProcess.Create(nil);
   hprocess.Executable := '/bin/bash';
-  while (i < (args.Capacity) ) do begin
-    writeln(args[i]);
+  while (i < (args.Count) ) do begin
+    write(args[i] + ' ');
     hprocess.Parameters.Add(args[i]);
     i := i  + 1;
    end;
+  writeln('');
    hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  //  Just what it says
    hprocess.Execute;         // Execute the command with parameters
  // end;

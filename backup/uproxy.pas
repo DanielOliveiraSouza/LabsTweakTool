@@ -1,4 +1,18 @@
 unit uproxy;
+{
+Configura o arquivo  INIT_PST.sh com as informações fornecidas em parametros
+	Para configurar um proxy que não necessita de autenticação, digite:
+	--set_proxy IP_SERVIDOR PORTA --use_login 0
+
+	Exemplo:
+	bash main-pst.sh --set_proxy 10.0.16.1 3128 --use_login 0
+
+	Para usar um proxy autenticado a sintaxe é :
+	--set_proxy IP_SERVIDOR PORTA --use_login 1 USUARIO SENHA
+
+	Exemplo:
+	bash main-pst.sh 10.0.16.1 3128 --use_login 1 aluno alunoufmt
+}
 
 {$mode objfpc}{$H+}
 
@@ -24,7 +38,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    Memo1: TMemo;
 
   //  memo1 : TMemo;
     //memo2: TMemo ;
@@ -51,6 +64,7 @@ type
   private
         // FlagProxy : boolean;
     proxyconfig : uprocessos.RunnableScripts;
+    cont: integer;
     args: TStringList;
   public
 
@@ -76,22 +90,42 @@ begin
       if (Self.CheckBox1.Checked) then  begin//se o proxy é autenticado
                Self.Edit3.ReadOnly:=false;
                Self.Edit4.ReadOnly:=false;
+               uglobal.flag_auth_proxy:= true;
 
       end
       else begin        //caso o proxy não seja autenticado
            Self.Edit3.ReadOnly:=true;
            Self.Edit4.ReadOnly:=true;
+           uglobal.flag_auth_proxy:=false;
       end ;
 
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
-     args.Create();
-     args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+     Self.cont := 0;
+     args.Add(Self.Edit1.Text);
+     args.Add(Self.Edit2.Text);
+     if ( uglobal.flag_auth_proxy = true) then begin
+              Self.args.Add('--use_login');
+              self.args.Add('1');
+              self.args.Add(self.Edit3.Text);
+              self.args.Add(self.Edit4.Text);
+     end else begin
+                self.args.Add('--use_login');
+                self.args.Add('0');
+     end;
+     //args.SaveToFile();
+    // proxyconfig.Create(args);
+     while  cont < Self.args.Count do begin
+                write(self.args[cont] + ' ');
+                cont := cont  + 1;
+     end;
+     writeln('');
+     writeln('From uproxy: Executando em modo teste, configurações ainda não escritas');
+     Self.Close();
 
-     proxyconfig.Create(args);
-     proxyconfig.RunProcess();
+    // proxyconfig.RunProcess();
   //self.runProcess();
   //self.runProces1('/home/danny/scripts/helena');
 
@@ -99,22 +133,23 @@ end;
 
 procedure TForm2.Edit1Change(Sender: TObject);
 begin
-
+      //verificar se a string é um IP ou HOST
 end;
 
 procedure TForm2.Edit2Change(Sender: TObject);
 begin
+  //Verificar se a string é um numero
 
 end;
 
 procedure TForm2.Edit3Change(Sender: TObject);
 begin
-
+  // este é o campo de usuário, só preenche ele se o proxy for autneticado
 end;
 
 procedure TForm2.Edit4Change(Sender: TObject);
 begin
-
+  //Este é o campo de password do proxy autenticado
 end;
 
 
@@ -123,8 +158,9 @@ begin
       //ao inicializar , bloquear os campos de usuário e senha
       Self.Edit3.ReadOnly:=true;
       Self.Edit4.ReadOnly:=true;
-    //  Self.Memo1:= TMemo.Create(nil);
-      //Self.Memo2 := TMemo.Create(nil);
+      Self.args := TStringList.Create();
+      Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+      Self.args.Add('--set_proxy');
 
 end;
 

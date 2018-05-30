@@ -8,7 +8,7 @@
         <Filename Value="proxytweaktoll.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <UsageCount Value="161"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -17,10 +17,9 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="98"/>
-        <CursorPos X="43" Y="100"/>
-        <UsageCount Value="161"/>
+        <TopLine Value="127"/>
+        <CursorPos X="49" Y="110"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -30,9 +29,11 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="122" Y="91"/>
-        <UsageCount Value="161"/>
+        <TopLine Value="110"/>
+        <CursorPos X="19" Y="125"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -40,140 +41,141 @@
         <Filename Value="uglobal.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos Y="5"/>
-        <UsageCount Value="114"/>
+        <TopLine Value="6"/>
+        <CursorPos X="36" Y="11"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="uprocessos.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="31"/>
-        <CursorPos X="114" Y="47"/>
-        <UsageCount Value="111"/>
+        <TopLine Value="46"/>
+        <CursorPos X="12" Y="58"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
       </Unit4>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="ugui.pas"/>
-        <Caret Line="130" Column="113" TopLine="127"/>
+        <Caret Line="97" Column="3" TopLine="95"/>
       </Position1>
       <Position2>
         <Filename Value="ugui.pas"/>
-        <Caret Line="129" Column="113" TopLine="126"/>
+        <Caret Line="98" Column="3" TopLine="96"/>
       </Position2>
       <Position3>
         <Filename Value="ugui.pas"/>
-        <Caret Line="128" Column="113" TopLine="125"/>
+        <Caret Line="99" Column="3" TopLine="97"/>
       </Position3>
       <Position4>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="127" Column="113" TopLine="124"/>
-      </Position4>
-      <Position5>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="126" Column="113" TopLine="123"/>
-      </Position5>
-      <Position6>
         <Filename Value="uproxy.pas"/>
         <Caret Line="92" Column="122" TopLine="68"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="91" Column="122" TopLine="67"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="108" Column="112" TopLine="98"/>
       </Position6>
       <Position7>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="97" Column="122" TopLine="73"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="103" Column="127" TopLine="98"/>
       </Position7>
       <Position8>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="96" Column="122" TopLine="72"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="105" Column="3" TopLine="103"/>
       </Position8>
       <Position9>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="95" Column="122" TopLine="71"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="100" Column="3" TopLine="98"/>
       </Position9>
       <Position10>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="96" Column="122" TopLine="72"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="105" Column="49" TopLine="103"/>
       </Position10>
       <Position11>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="97" Column="122" TopLine="73"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="148" Column="3" TopLine="127"/>
       </Position11>
       <Position12>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="96" Column="122" TopLine="72"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="110" Column="49" TopLine="108"/>
       </Position12>
       <Position13>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="95" Column="122" TopLine="71"/>
+        <Filename Value="uglobal.pas"/>
+        <Caret Line="14" Column="36"/>
       </Position13>
       <Position14>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="94" Column="122" TopLine="70"/>
+        <Caret Line="121" Column="46" TopLine="112"/>
       </Position14>
       <Position15>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="93" Column="122" TopLine="69"/>
+        <Caret Line="122" Column="6" TopLine="119"/>
       </Position15>
       <Position16>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="97" Column="122" TopLine="73"/>
+        <Caret Line="135" Column="36" TopLine="125"/>
       </Position16>
       <Position17>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="96" Column="122" TopLine="72"/>
+        <Caret Line="127" Column="78" TopLine="125"/>
       </Position17>
       <Position18>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="97" Column="122" TopLine="73"/>
+        <Caret Line="143" Column="40" TopLine="130"/>
       </Position18>
       <Position19>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="96" Column="122" TopLine="72"/>
+        <Caret Line="67" Column="19" TopLine="229"/>
       </Position19>
       <Position20>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="95" Column="122" TopLine="71"/>
+        <Caret Line="113" Column="35" TopLine="104"/>
       </Position20>
       <Position21>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="94" Column="122" TopLine="70"/>
+        <Caret Line="108" Column="19" TopLine="94"/>
       </Position21>
       <Position22>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="93" Column="122" TopLine="69"/>
+        <Caret Line="151" Column="12" TopLine="140"/>
       </Position22>
       <Position23>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="92" Column="122" TopLine="68"/>
+        <Caret Line="108" Column="53" TopLine="101"/>
       </Position23>
       <Position24>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="96" Column="3" TopLine="94"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="150" Column="79" TopLine="137"/>
       </Position24>
       <Position25>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="97" Column="3" TopLine="95"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="149" Column="41" TopLine="133"/>
       </Position25>
       <Position26>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="98" Column="3" TopLine="96"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="15" Column="153" TopLine="34"/>
       </Position26>
       <Position27>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="99" Column="3" TopLine="97"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="90" Column="7" TopLine="88"/>
       </Position27>
       <Position28>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="92" Column="122" TopLine="68"/>
+        <Caret Line="109" Column="50" TopLine="101"/>
       </Position28>
       <Position29>
         <Filename Value="uproxy.pas"/>
-        <Caret Line="91" Column="122" TopLine="67"/>
+        <Caret Line="110" Column="15" TopLine="104"/>
       </Position29>
       <Position30>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="108" Column="112" TopLine="98"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="90" Column="7" TopLine="88"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
