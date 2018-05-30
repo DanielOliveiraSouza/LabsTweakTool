@@ -104,13 +104,18 @@ end;
 procedure TForm2.Button1Click(Sender: TObject);
 begin
      Self.cont := 0;
-     args.Add(Self.Edit1.Text);
-     args.Add(Self.Edit2.Text);
+     if Self.Edit1.Text <> ''  then
+        args.Add(Self.Edit1.Text);
+
+     if Self.Edit2.Text <> '' then
+        args.Add(Self.Edit2.Text);
      if ( uglobal.flag_auth_proxy = true) then begin
               Self.args.Add('--use_login');
               self.args.Add('1');
-              self.args.Add(self.Edit3.Text);
-              self.args.Add(self.Edit4.Text);
+              if Self.Edit3.Text <> '' then
+                 self.args.Add(self.Edit3.Text);
+              if Self.Edit4.Text <> '' then
+                 self.args.Add(self.Edit4.Text)  ;
      end else begin
                 self.args.Add('--use_login');
                 self.args.Add('0');
@@ -122,7 +127,7 @@ begin
                 cont := cont  + 1;
      end;
      writeln('');
-     writeln('From uproxy: Executando em modo teste, configurações ainda não escritas');
+   //  writeln('From uproxy: Executando em modo teste, configurações ainda não escritas');
      Self.Close();
 
     // proxyconfig.RunProcess();

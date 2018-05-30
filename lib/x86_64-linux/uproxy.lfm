@@ -1,85 +1,85 @@
 object Form2: TForm2
-  Left = 132
-  Height = 479
-  Top = 74
-  Width = 602
+  Left = 397
+  Height = 431
+  Top = 170
+  Width = 595
   Caption = 'Configurações de proxy'
-  ClientHeight = 479
-  ClientWidth = 602
+  ClientHeight = 431
+  ClientWidth = 595
   OnCreate = FormCreate
   LCLVersion = '1.8.2.0'
   object Label1: TLabel
-    Left = 104
+    Left = 85
     Height = 14
-    Top = 105
+    Top = 83
     Width = 84
     Caption = 'Servidor Proxy:'
     ParentColor = False
     OnClick = Label1Click
   end
   object Edit1: TEdit
-    Left = 216
+    Left = 197
     Height = 27
-    Top = 100
+    Top = 78
     Width = 312
     OnChange = Edit1Change
     TabOrder = 0
   end
   object Label2: TLabel
-    Left = 104
+    Left = 85
     Height = 14
-    Top = 152
+    Top = 130
     Width = 33
     Caption = 'Porta:'
     ParentColor = False
     OnClick = Label2Click
   end
   object Edit2: TEdit
-    Left = 216
+    Left = 197
     Height = 27
-    Top = 145
+    Top = 123
     Width = 312
     OnChange = Edit2Change
     TabOrder = 1
   end
   object CheckBox1: TCheckBox
-    Left = 105
+    Left = 86
     Height = 24
-    Top = 200
+    Top = 178
     Width = 127
     Caption = 'Proxy autenticado'
     OnChange = CheckBox1Change
     TabOrder = 2
   end
   object Label3: TLabel
-    Left = 200
+    Left = 181
     Height = 14
-    Top = 245
+    Top = 223
     Width = 44
     Caption = 'Usuário'
     ParentColor = False
     OnClick = Label3Click
   end
   object Edit3: TEdit
-    Left = 272
+    Left = 253
     Height = 27
-    Top = 237
+    Top = 215
     Width = 192
     OnChange = Edit3Change
     TabOrder = 3
   end
   object Label4: TLabel
-    Left = 200
+    Left = 181
     Height = 14
-    Top = 297
+    Top = 275
     Width = 38
     Caption = 'Senha:'
     ParentColor = False
   end
   object Edit4: TEdit
-    Left = 272
+    Left = 253
     Height = 27
-    Top = 285
+    Top = 263
     Width = 193
     EchoMode = emPassword
     OnChange = Edit4Change
@@ -87,9 +87,9 @@ object Form2: TForm2
     TabOrder = 4
   end
   object Button1: TButton
-    Left = 280
+    Left = 261
     Height = 33
-    Top = 360
+    Top = 338
     Width = 75
     Caption = 'Salvar'
     OnClick = Button1Click

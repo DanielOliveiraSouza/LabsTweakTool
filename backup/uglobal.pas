@@ -13,14 +13,26 @@ uses
 
 
 var
-  flag_proxy : boolean = false;          //flag de ativaçao/desativacao do proxy
-  flag_root : boolean = false;           //flag de super usuário on /off
-  flag_auth_proxy: boolean = false;    //flag de proxy autenticado
-  flag_set_host: boolean = false;      //flag que avisa que o campo de host(proxy) foi preenchido
-  flag_set_porta: boolean = false;     // flag que avisa que o campo de porta(proxy) foi preenchido
-  flag_set_user_proxy : boolean = false; // flag que avisa que o campo de  usuário(proxy autenticado) foi preenchido
-  flag_set_psw_proxy : boolean = false; // flag que avisa que o campo de senha(proxy autenticado) foi preenchido
-  PST_HOME : string ; // campo que contém o caminho dos módulos PST ( a ser implementado em futuro próximo)
+  flag_proxy : boolean = false;                //flag de ativaçao/desativacao do proxy
+  flag_root : boolean = false;                  //flag de super usuário on /off
+  flag_auth_proxy: boolean = false;             //flag de proxy autenticado
+ { flag_set_host: boolean = false;               //flag que avisa que o campo de host(proxy) foi preenchido
+  flag_set_porta: boolean = false;              //flag que avisa que o campo de porta(proxy) foi preenchido
+  flag_set_user_proxy : boolean = false;       // flag que avisa que o campo de  usuário(proxy autenticado) foi preenchido
+  flag_set_psw_proxy : boolean = false;        // flag que avisa que o campo de senha(proxy autenticado) foi preenchido
+  }
+  PST_HOME : string = '';                           // campo que contém o caminho dos módulos PST ( a ser implementado em futuro próximo)
+  flag_proxy_form_valid : boolean  = false;
+  erro_proxy_form : integer = -1;
+  { convenção erro_proxy_form
+  -1 VAZIO
+  0  SEM ERROS
+  1  HOST
+  2  PORTA
+  3  USUARIO
+  4  SENHA
+  }
+
 
 
 
