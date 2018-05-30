@@ -24,7 +24,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    Memo1: TMemo;
 
   //  memo1 : TMemo;
     //memo2: TMemo ;

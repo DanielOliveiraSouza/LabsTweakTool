@@ -287,9 +287,9 @@ object Form1: TForm1
     }
   end
   object Image2: TImage
-    Left = 136
+    Left = 134
     Height = 64
-    Top = 198
+    Top = 184
     Width = 64
     OnClick = Image2Click
     Picture.Data = {

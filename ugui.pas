@@ -97,17 +97,17 @@ end;
 
 procedure TForm1.Image1Click(Sender: TObject);
 begin
-
+  ShowMessage('Recurso a ser implementado');
 end;
 
 procedure TForm1.Image2Click(Sender: TObject);
 begin
-
+  ShowMessage('Recurso a ser implementado');
 end;
 
 procedure TForm1.Image3Click(Sender: TObject);
 begin
-
+  ShowMessage('Recurso a ser implementado');
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);

@@ -1,85 +1,85 @@
 object Form2: TForm2
   Left = 374
-  Height = 490
+  Height = 538
   Top = 130
-  Width = 554
+  Width = 716
   Caption = 'Configurações de proxy'
-  ClientHeight = 490
-  ClientWidth = 554
+  ClientHeight = 538
+  ClientWidth = 716
   OnCreate = FormCreate
   LCLVersion = '1.8.2.0'
   object Label1: TLabel
-    Left = 40
+    Left = 140
     Height = 14
-    Top = 72
+    Top = 236
     Width = 84
     Caption = 'Servidor Proxy:'
     ParentColor = False
     OnClick = Label1Click
   end
   object Edit1: TEdit
-    Left = 152
+    Left = 252
     Height = 27
-    Top = 67
+    Top = 231
     Width = 312
     OnChange = Edit1Change
     TabOrder = 0
   end
   object Label2: TLabel
-    Left = 40
+    Left = 140
     Height = 14
-    Top = 119
+    Top = 283
     Width = 33
     Caption = 'Porta:'
     ParentColor = False
     OnClick = Label2Click
   end
   object Edit2: TEdit
-    Left = 152
+    Left = 252
     Height = 27
-    Top = 112
+    Top = 276
     Width = 312
     OnChange = Edit2Change
     TabOrder = 1
   end
   object CheckBox1: TCheckBox
-    Left = 41
+    Left = 141
     Height = 24
-    Top = 167
+    Top = 331
     Width = 127
     Caption = 'Proxy autenticado'
     OnChange = CheckBox1Change
     TabOrder = 2
   end
   object Label3: TLabel
-    Left = 136
+    Left = 236
     Height = 14
-    Top = 212
+    Top = 376
     Width = 44
     Caption = 'Usuário'
     ParentColor = False
     OnClick = Label3Click
   end
   object Edit3: TEdit
-    Left = 208
+    Left = 308
     Height = 27
-    Top = 204
+    Top = 368
     Width = 192
     OnChange = Edit3Change
     TabOrder = 3
   end
   object Label4: TLabel
-    Left = 136
+    Left = 236
     Height = 14
-    Top = 264
+    Top = 428
     Width = 38
     Caption = 'Senha:'
     ParentColor = False
   end
   object Edit4: TEdit
-    Left = 208
+    Left = 308
     Height = 27
-    Top = 252
+    Top = 416
     Width = 193
     EchoMode = emPassword
     OnChange = Edit4Change
@@ -104,13 +104,5 @@ object Form2: TForm2
       'Memo1'
     )
     TabOrder = 6
-  end
-  object Memo2: TMemo
-    Left = 40
-    Height = 90
-    Top = 369
-    Width = 470
-    OnChange = Memo2Change
-    TabOrder = 7
   end
 end
