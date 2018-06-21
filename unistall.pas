@@ -68,6 +68,8 @@ begin
  // Writeln(Self.password + 'endMsg unistall');
   //Self.procInstall.RunProcessAsRoot(Self.password);
   Self.procInstall.RunProcessAsPoliceKit();
+  Self.procInstall.Free;
+  Self.Close;
 
 end;
 

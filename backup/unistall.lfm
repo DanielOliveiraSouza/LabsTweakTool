@@ -10,7 +10,7 @@ object Form4: TForm4
   object RadioGroup1: TRadioGroup
     Left = 64
     Height = 129
-    Top = 24
+    Top = 49
     Width = 248
     AutoFill = True
     Caption = 'Selecione um item para instalar'
@@ -36,16 +36,16 @@ object Form4: TForm4
   object Button1: TButton
     Left = 64
     Height = 25
-    Top = 168
+    Top = 193
     Width = 75
     Caption = 'Cancelar'
     OnClick = Button1Click
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 248
+    Left = 237
     Height = 25
-    Top = 168
+    Top = 193
     Width = 75
     Caption = 'OK'
     OnClick = Button2Click
