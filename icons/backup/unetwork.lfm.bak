@@ -1,0 +1,61 @@
+object Form3: TForm3
+  Left = 24
+  Height = 255
+  Top = 125
+  Width = 293
+  Caption = 'Rede'
+  ClientHeight = 255
+  ClientWidth = 293
+  OnCreate = FormCreate
+  LCLVersion = '1.8.2.0'
+  object RadioGroup1: TRadioGroup
+    Left = 49
+    Height = 104
+    Top = 24
+    Width = 200
+    AutoFill = True
+    Caption = 'Ativar proxy?'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 86
+    ClientWidth = 198
+    Items.Strings = (
+      'Ativar'
+      'Desativar'
+    )
+    OnClick = RadioGroup1Click
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 160
+    Height = 25
+    Top = 184
+    Width = 89
+    Caption = 'Avançado'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 48
+    Height = 25
+    Top = 184
+    Width = 88
+    Caption = 'OK'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object CheckBox1: TCheckBox
+    Left = 48
+    Height = 23
+    Top = 144
+    Width = 197
+    Caption = ' Global Proxy ( precisa do root)'
+    OnChange = CheckBox1Change
+    TabOrder = 3
+  end
+end

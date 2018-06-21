@@ -1,0 +1,54 @@
+object Form4: TForm4
+  Left = 603
+  Height = 291
+  Top = 231
+  Width = 367
+  Caption = 'Guia de Instalação'
+  ClientHeight = 291
+  ClientWidth = 367
+  LCLVersion = '1.8.2.0'
+  object RadioGroup1: TRadioGroup
+    Left = 64
+    Height = 129
+    Top = 24
+    Width = 248
+    AutoFill = True
+    Caption = 'Selecione um item para instalar'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 111
+    ClientWidth = 246
+    Items.Strings = (
+      'Atualizar e Instalar '
+      'Apenas Instalar'
+      'Bibliotecas de Computação Gráfica'
+      'Ferramentas para Redes'
+      'Outros'
+    )
+    OnClick = RadioGroup1Click
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 64
+    Height = 25
+    Top = 168
+    Width = 75
+    Caption = 'Cancelar'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 248
+    Height = 25
+    Top = 168
+    Width = 75
+    Caption = 'OK'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+end

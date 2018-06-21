@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 607
+  Left = 608
   Height = 435
-  Top = 106
+  Top = 111
   Width = 549
   Caption = 'ProxyTweakTool'
   ClientHeight = 435
@@ -15,9 +15,9 @@ object Form1: TForm1
     ParentColor = False
   end
   object Image1: TImage
-    Left = 134
+    Left = 240
     Height = 64
-    Top = 40
+    Top = 56
     Width = 64
     OnClick = Image1Click
     Picture.Data = {
@@ -287,7 +287,7 @@ object Form1: TForm1
     }
   end
   object Image2: TImage
-    Left = 134
+    Left = 120
     Height = 64
     Top = 184
     Width = 64
@@ -469,26 +469,26 @@ object Form1: TForm1
     }
   end
   object Label2: TLabel
-    Left = 102
+    Left = 208
     Height = 14
-    Top = 112
+    Top = 128
     Width = 129
     Caption = 'Configurações de Rede'
     ParentColor = False
     OnClick = Label2Click
   end
   object Label3: TLabel
-    Left = 94
+    Left = 72
     Height = 14
-    Top = 280
+    Top = 264
     Width = 154
     Caption = 'Instalação de componentes'
     ParentColor = False
   end
   object Image3: TImage
-    Left = 343
+    Left = 344
     Height = 64
-    Top = 40
+    Top = 184
     Width = 66
     OnClick = Image3Click
     Picture.Data = {
@@ -687,62 +687,12 @@ object Form1: TForm1
     }
   end
   object Label4: TLabel
-    Left = 325
+    Left = 328
     Height = 14
-    Top = 112
+    Top = 264
     Width = 93
     Caption = 'Ajuda e Manuais'
     ParentColor = False
     OnClick = Label4Click
-  end
-  object Button2: TButton
-    Left = 408
-    Height = 25
-    Top = 330
-    Width = 75
-    Caption = 'OK'
-    OnClick = Button2Click
-    TabOrder = 0
-  end
-  object Button1: TButton
-    Left = 296
-    Height = 27
-    Top = 330
-    Width = 89
-    Caption = 'Avançado'
-    OnClick = Button1Click
-    TabOrder = 1
-  end
-  object CheckBox1: TCheckBox
-    Left = 279
-    Height = 24
-    Top = 289
-    Width = 198
-    Caption = ' Global Proxy ( precisa do root)'
-    OnChange = CheckBox1Change
-    TabOrder = 2
-  end
-  object RadioGroup1: TRadioGroup
-    Left = 296
-    Height = 105
-    Top = 173
-    Width = 185
-    AutoFill = True
-    Caption = 'Ativar proxy?'
-    ChildSizing.LeftRightSpacing = 6
-    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-    ChildSizing.EnlargeVertical = crsHomogenousChildResize
-    ChildSizing.ShrinkHorizontal = crsScaleChilds
-    ChildSizing.ShrinkVertical = crsScaleChilds
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 1
-    ClientHeight = 87
-    ClientWidth = 183
-    Items.Strings = (
-      'Ativar'
-      'Desativar'
-    )
-    OnClick = RadioGroup1Click
-    TabOrder = 3
   end
 end
