@@ -38,7 +38,7 @@ var
 
 Begin
   i := 0;
-  DetectXTerm();
+  DetectXTerm();  //função importante! Detecta o tipo de emulador de terminal
   hprocess := TProcess.Create(nil);
   hprocess.Executable := '/bin/bash';
   while (i < (args.Count) ) do begin

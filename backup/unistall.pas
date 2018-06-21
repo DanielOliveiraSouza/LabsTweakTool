@@ -60,25 +60,31 @@ end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-  Self.args := TStringList.Create() ;
-  Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
-  Self.args.Add(Self.str_args);
-  Self.procInstall := RunnableScripts.Create(Self.args);
- // Self.password :=   PasswordBox('password','Ente com  a senha de root');
- // Writeln(Self.password + 'endMsg unistall');
-  //Self.procInstall.RunProcessAsRoot(Self.password);
-  Self.procInstall.RunProcessAsPoliceKit();
+  if ( Self.RadioGroup1.ItemIndex <> -1 ) then begin
+    Self.args := TStringList.Create() ;
+    Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+    Self.args.Add(Self.str_args);
+    Self.procInstall := RunnableScripts.Create(Self.args);
+   // Self.password :=   PasswordBox('password','Ente com  a senha de root');
+   // Writeln(Self.password + 'endMsg unistall');
+    //Self.procInstall.RunProcessAsRoot(Self.password);
+    Self.procInstall.RunProcessAsPoliceKit();
+    Self.procInstall.Free;
+  end;
+  Self.Close;
 
 end;
 
 procedure TForm4.RadioGroup1Click(Sender: TObject);
+
 begin
  // Self.SingletonArgs();
      case    self.RadioGroup1.ItemIndex  of
-     0: Self.str_args:= '--t'; // Self.sargs.add('--i-t');
-     1: Self.str_args := '--i-e';//Self.args.add('--i-e');
-     2: Self.str_args := '--i-cg';//Self.args.add('--i-cg');
-     3: Self.str_args:='--i-redes';//Self.args.add('--i-redes');
+       0: Self.str_args:= '--t'; // Self.sargs.add('--i-t');
+       1: Self.str_args := '--i-e';//Self.args.add('--i-e');
+       2: Self.str_args := '--i-cg';//Self.args.add('--i-cg');
+       3: Self.str_args:='--i-redes';//Self.args.add('--i-redes');
+       4: Self.str_args:='--i-d';
      end
 end;
 end.

@@ -128,7 +128,7 @@ begin
      // hprocess.Input.WriteBuffer(password[1],Length(password));
      hprocess.Execute;         // Execute the command with parameters
 
-     writeln('Writing buffering password');
+    // writeln('Writing buffering password');
 
 
    // end;
