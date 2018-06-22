@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls,uprocessos;
+  StdCtrls,uprocessos,uglobal;
 
 type
 
@@ -43,7 +43,7 @@ var
 begin
   cont := 0;
      Self.args := TStringList.Create() ;
-     Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+     Self.args.Add(uglobal.MAIN_PST_HOME);
   while ( cont < Self.args.Count ) do
   begin
     writeln(self.args[cont]);
@@ -60,9 +60,10 @@ end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
+  //verificar se um item válido foi selecionado
   if ( Self.RadioGroup1.ItemIndex <> -1 ) then begin
     Self.args := TStringList.Create() ;
-    Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+    Self.args.Add(uglobal.PST_HOME + '/main-pst.sh');
     Self.args.Add(Self.str_args);
     Self.procInstall := RunnableScripts.Create(Self.args);
    // Self.password :=   PasswordBox('password','Ente com  a senha de root');
@@ -71,7 +72,7 @@ begin
     Self.procInstall.RunProcessAsPoliceKit();
     Self.procInstall.Free;
   end;
-  Self.Close;
+  Self.Close;   //encerra o Tform
 
 end;
 

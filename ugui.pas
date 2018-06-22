@@ -5,8 +5,9 @@ unit ugui;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons,uproxy,uglobal,uprocessos,unetwork,unistall;
+  Classes, SysUtils, FileUtil, SynHighlighterIni, IDEWindowIntf, Forms,
+  Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, uproxy, uglobal,
+  uprocessos, unetwork, unistall,alterarhost;
 
 type
 
@@ -47,6 +48,8 @@ type
     procedure Label7Click(Sender: TObject);
     procedure Label8Click(Sender: TObject);
     procedure Label9Click(Sender: TObject);
+    procedure TaskDialog1ButtonClicked(Sender: TObject;
+      AModalResult: TModalResult; var ACanClose: Boolean);
   private
 
 
@@ -62,6 +65,7 @@ var
   FInstall :TForm4;
   TesteProc : uprocessos.RunnableScripts;
   cargs: TstringList;
+  FAltHost : TForm5;
 
 
 
@@ -96,10 +100,14 @@ end;
 
 procedure TForm1.Image4Click(Sender: TObject);
 begin
-  cargs := TStringList.Create;
-  cargs.Add('try.sh');
-  TesteProc:= RunnableScripts.Create(cargs);
-  TesteProc.RunProcess();
+  //cargs := TStringList.Create;
+  //cargs.Add('try.sh');
+  //TesteProc:= RunnableScripts.Create(cargs);
+  //TesteProc.RunProcess();
+  FAltHost := TForm5.Create(Self);
+  //Self.Visible:=false;
+//  Self.Show = false;
+  FAltHost.ShowModal;
 end;
 
 procedure TForm1.Image5Click(Sender: TObject);
@@ -162,6 +170,12 @@ begin
 end;
 
 procedure TForm1.Label9Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.TaskDialog1ButtonClicked(Sender: TObject;
+  AModalResult: TModalResult; var ACanClose: Boolean);
 begin
 
 end;

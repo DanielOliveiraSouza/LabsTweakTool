@@ -3,12 +3,12 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="7">
+    <Units Count="10">
       <Unit0>
         <Filename Value="proxytweaktoll.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
-        <CursorPos X="63" Y="10"/>
+        <EditorIndex Value="9"/>
+        <CursorPos X="76" Y="10"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -18,8 +18,9 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="83"/>
-        <CursorPos X="25" Y="102"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="158"/>
+        <CursorPos X="30" Y="107"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,9 +31,9 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="79"/>
-        <CursorPos X="47" Y="124"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="90"/>
+        <CursorPos X="20" Y="143"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -40,19 +41,19 @@
       <Unit3>
         <Filename Value="uglobal.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="13"/>
-        <CursorPos X="79" Y="26"/>
-        <UsageCount Value="189"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="23"/>
+        <CursorPos Y="46"/>
+        <UsageCount Value="212"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="uprocessos.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="116"/>
-        <CursorPos X="20" Y="135"/>
-        <UsageCount Value="186"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="110"/>
+        <CursorPos X="74" Y="111"/>
+        <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -61,11 +62,10 @@
         <ComponentName Value="Form3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="82"/>
-        <CursorPos X="43" Y="89"/>
-        <UsageCount Value="78"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="80"/>
+        <CursorPos X="88" Y="95"/>
+        <UsageCount Value="113"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
@@ -75,134 +75,164 @@
         <ComponentName Value="Form4"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="51"/>
-        <CursorPos X="81" Y="76"/>
-        <UsageCount Value="73"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="2"/>
+        <CursorPos X="74" Y="37"/>
+        <UsageCount Value="108"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="alterarhost.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form5"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="10"/>
+        <CursorPos X="103" Y="19"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../../lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="650"/>
+        <CursorPos X="9" Y="746"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../../lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="2920"/>
+        <CursorPos Y="2931"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit9>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="139" Column="3" TopLine="118"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="41" Column="14" TopLine="21"/>
       </Position1>
       <Position2>
         <Filename Value="ugui.pas"/>
-        <Caret Line="95" Column="3" TopLine="93"/>
+        <Caret Line="175" Column="3" TopLine="156"/>
       </Position2>
       <Position3>
         <Filename Value="ugui.pas"/>
-        <Caret Line="74" Column="3" TopLine="72"/>
+        <Caret Line="108" Column="21" TopLine="100"/>
       </Position3>
       <Position4>
         <Filename Value="ugui.pas"/>
-        <Caret Line="139" Column="3" TopLine="118"/>
+        <Caret Line="68" Column="32" TopLine="61"/>
       </Position4>
       <Position5>
         <Filename Value="ugui.pas"/>
-        <Caret Line="141" Column="3" TopLine="120"/>
+        <Caret Line="107" Column="27" TopLine="100"/>
       </Position5>
       <Position6>
         <Filename Value="ugui.pas"/>
-        <Caret Line="146" Column="3" TopLine="125"/>
+        <Caret Line="107" Column="26" TopLine="100"/>
       </Position6>
       <Position7>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="121" Column="3" TopLine="119"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="49" Column="74" TopLine="38"/>
       </Position7>
       <Position8>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="128" Column="3" TopLine="126"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="50" Column="74" TopLine="39"/>
       </Position8>
       <Position9>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="109" Column="102" TopLine="102"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="49" Column="74" TopLine="38"/>
       </Position9>
       <Position10>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="57" Column="97" TopLine="53"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="167" Column="28" TopLine="157"/>
       </Position10>
       <Position11>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="73" Column="8" TopLine="61"/>
+        <Filename Value="uproxy.pas"/>
+        <Caret Line="174" Column="28" TopLine="164"/>
       </Position11>
       <Position12>
         <Filename Value="ugui.pas"/>
-        <Caret Line="112" Column="84" TopLine="103"/>
+        <Caret Line="107" Column="32" TopLine="100"/>
       </Position12>
       <Position13>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="96" Column="3" TopLine="85"/>
+        <Filename Value="../../../../lazarus/lcl/forms.pp"/>
+        <Caret Line="751" Column="9" TopLine="735"/>
       </Position13>
       <Position14>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="71" Column="101" TopLine="71"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="108" Column="16" TopLine="88"/>
       </Position14>
       <Position15>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="76" Column="5" TopLine="74"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="57" Column="23" TopLine="39"/>
       </Position15>
       <Position16>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="77" Column="5" TopLine="75"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="35" Column="20" TopLine="31"/>
       </Position16>
       <Position17>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="47" Column="10" TopLine="40"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="34" Column="8" TopLine="22"/>
       </Position17>
       <Position18>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="56" Column="86" TopLine="40"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="108" Column="22" TopLine="96"/>
       </Position18>
       <Position19>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="89" Column="93" TopLine="70"/>
+        <Filename Value="../../../../lazarus/lcl/forms.pp"/>
+        <Caret Line="747" Column="28" TopLine="726"/>
       </Position19>
       <Position20>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="78" Column="5" TopLine="76"/>
+        <Filename Value="../../../../lazarus/lcl/forms.pp"/>
+        <Caret Line="748" Column="45" TopLine="64"/>
       </Position20>
       <Position21>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="87" Column="67" TopLine="82"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="55" Column="16" TopLine="37"/>
       </Position21>
       <Position22>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="78" Column="5" TopLine="76"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="42" Column="19" TopLine="37"/>
       </Position22>
       <Position23>
-        <Filename Value="uproxy.pas"/>
-        <Caret Line="124" Column="47" TopLine="4"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="32" Column="27" TopLine="20"/>
       </Position23>
       <Position24>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="64" Column="17" TopLine="49"/>
+        <Filename Value="ugui.pas"/>
+        <Caret Line="130" Column="49" TopLine="161"/>
       </Position24>
       <Position25>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="76" Column="90" TopLine="88"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="50" Column="31" TopLine="27"/>
       </Position25>
       <Position26>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="87" Column="13" TopLine="37"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="25" Column="30" TopLine="8"/>
       </Position26>
       <Position27>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="76" Column="96" TopLine="2"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="29" Column="25" TopLine="17"/>
       </Position27>
       <Position28>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="19" Column="92"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="78" Column="27" TopLine="58"/>
       </Position28>
       <Position29>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="104" Column="42" TopLine="85"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="83" Column="41" TopLine="61"/>
       </Position29>
       <Position30>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="44" Column="92" TopLine="40"/>
+        <Filename Value="alterarhost.pas"/>
+        <Caret Line="48" Column="5" TopLine="40"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

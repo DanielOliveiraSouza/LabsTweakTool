@@ -3,11 +3,11 @@ object Form1: TForm1
   Height = 584
   Top = 76
   Width = 542
-  Caption = 'ProxyTweakTool'
+  Caption = 'PST Tweak Tool  ver:2.0-rc10-testing'
   ClientHeight = 584
   ClientWidth = 542
   OnCreate = FormCreate
-  LCLVersion = '1.8.2.0'
+  Visible = False
   object Label1: TLabel
     Left = 97
     Height = 1

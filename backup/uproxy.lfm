@@ -1,13 +1,13 @@
 object Form2: TForm2
-  Left = 397
+  Left = 398
   Height = 431
-  Top = 170
+  Top = 175
   Width = 595
   Caption = 'Configurações de proxy'
   ClientHeight = 431
   ClientWidth = 595
   OnCreate = FormCreate
-  LCLVersion = '1.8.2.0'
+  Visible = False
   object Label1: TLabel
     Left = 85
     Height = 14
@@ -19,7 +19,7 @@ object Form2: TForm2
   end
   object Edit1: TEdit
     Left = 197
-    Height = 27
+    Height = 29
     Top = 78
     Width = 312
     OnChange = Edit1Change
@@ -36,63 +36,71 @@ object Form2: TForm2
   end
   object Edit2: TEdit
     Left = 197
-    Height = 27
+    Height = 29
     Top = 123
     Width = 312
     OnChange = Edit2Change
     TabOrder = 1
   end
   object CheckBox1: TCheckBox
-    Left = 86
-    Height = 24
-    Top = 178
-    Width = 127
+    Left = 80
+    Height = 32
+    Top = 176
+    Width = 134
     Caption = 'Proxy autenticado'
     OnChange = CheckBox1Change
     TabOrder = 2
   end
   object Label3: TLabel
-    Left = 181
+    Left = 85
     Height = 14
-    Top = 223
-    Width = 44
-    Caption = 'Usuário'
+    Top = 230
+    Width = 47
+    Caption = 'Usuário:'
     ParentColor = False
     OnClick = Label3Click
   end
   object Edit3: TEdit
-    Left = 253
-    Height = 27
+    Left = 197
+    Height = 29
     Top = 215
-    Width = 192
+    Width = 312
     OnChange = Edit3Change
     TabOrder = 3
   end
   object Label4: TLabel
-    Left = 181
+    Left = 85
     Height = 14
-    Top = 275
+    Top = 278
     Width = 38
     Caption = 'Senha:'
     ParentColor = False
   end
   object Edit4: TEdit
-    Left = 253
-    Height = 27
+    Left = 197
+    Height = 29
     Top = 263
-    Width = 193
+    Width = 312
     EchoMode = emPassword
     OnChange = Edit4Change
     PasswordChar = '*'
     TabOrder = 4
   end
   object Button1: TButton
-    Left = 261
+    Left = 432
     Height = 33
-    Top = 338
+    Top = 336
     Width = 75
     Caption = 'Salvar'
     OnClick = Button1Click
     TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 128
+    Height = 33
+    Top = 336
+    Width = 75
+    Caption = 'Cancelar'
+    TabOrder = 6
   end
 end

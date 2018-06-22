@@ -79,7 +79,7 @@ end;
         //  writeln(' From Tform3.Ok,flag root = ',uglobal.flag_root);
           args := TstringList.Create();
           //writeln('from bottuon2 cmd_line=',commandlinestring);
-          args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+          args.Add(uglobal.PST_HOME + '/main-pst.sh');
           args.Add(commandlinestring);
           pst_call := RunnableScripts.Create(args);
           if ( uglobal.flag_root = false ) then

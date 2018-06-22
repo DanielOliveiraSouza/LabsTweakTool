@@ -29,6 +29,7 @@ type
 
   TForm2 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     CheckBox1: TCheckBox;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -45,6 +46,7 @@ type
     //: TMemo;
    // memo2: TMemo;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
@@ -136,6 +138,11 @@ begin
 
 end;
 
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+        Self.Close;
+end;
+
 procedure TForm2.Edit1Change(Sender: TObject);
 begin
       //verificar se a string é um IP ou HOST
@@ -164,7 +171,7 @@ begin
       Self.Edit3.ReadOnly:=true;
       Self.Edit4.ReadOnly:=true;
       Self.args := TStringList.Create();
-      Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+      Self.args.Add(uglobal.PST_HOME + '/main-pst.sh');
       Self.args.Add('--set_proxy');
 
 end;

@@ -29,6 +29,7 @@ type
 
   TForm2 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     CheckBox1: TCheckBox;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -164,7 +165,7 @@ begin
       Self.Edit3.ReadOnly:=true;
       Self.Edit4.ReadOnly:=true;
       Self.args := TStringList.Create();
-      Self.args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+      Self.args.Add(uglobal.PST_HOME + '/main-pst.sh');
       Self.args.Add('--set_proxy');
 
 end;
