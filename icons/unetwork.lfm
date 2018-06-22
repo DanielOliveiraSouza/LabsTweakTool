@@ -50,10 +50,10 @@ object Form3: TForm3
     TabOrder = 2
   end
   object CheckBox1: TCheckBox
-    Left = 48
-    Height = 23
+    Left = 49
+    Height = 32
     Top = 144
-    Width = 197
+    Width = 205
     Caption = ' Global Proxy ( precisa do root)'
     OnChange = CheckBox1Change
     TabOrder = 3

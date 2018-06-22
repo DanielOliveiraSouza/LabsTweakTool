@@ -40,6 +40,7 @@ type
     procedure Image5Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
+    procedure Label3Click(Sender: TObject);
     procedure Label4Click(Sender: TObject);
     procedure Label5Click(Sender: TObject);
     procedure Label6Click(Sender: TObject);
@@ -59,6 +60,9 @@ var
   Form1: TForm1;
   Fnetwork : TForm3;
   FInstall :TForm4;
+  TesteProc : uprocessos.RunnableScripts;
+  cargs: TstringList;
+
 
 
 implementation
@@ -92,7 +96,7 @@ end;
 
 procedure TForm1.Image4Click(Sender: TObject);
 begin
-
+  TesteProc:=;
 end;
 
 procedure TForm1.Image5Click(Sender: TObject);
@@ -120,6 +124,11 @@ end;
 
 
 procedure TForm1.Label2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Label3Click(Sender: TObject);
 begin
 
 end;

@@ -60,6 +60,9 @@ var
   Form1: TForm1;
   Fnetwork : TForm3;
   FInstall :TForm4;
+  TesteProc : uprocessos.RunnableScripts;
+  cargs: TstringList;
+
 
 
 implementation
@@ -93,7 +96,10 @@ end;
 
 procedure TForm1.Image4Click(Sender: TObject);
 begin
-
+  cargs := TStringList.Create;
+  cargs.Add('try.sh');
+  TesteProc:= RunnableScripts.Create(cargs);
+  TesteProc.RunProcess();
 end;
 
 procedure TForm1.Image5Click(Sender: TObject);

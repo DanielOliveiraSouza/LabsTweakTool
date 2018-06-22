@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 444
+  Left = 445
   Height = 584
   Top = 76
-  Width = 543
+  Width = 542
   Caption = 'ProxyTweakTool'
   ClientHeight = 584
-  ClientWidth = 543
+  ClientWidth = 542
   OnCreate = FormCreate
   LCLVersion = '1.8.2.0'
   object Label1: TLabel
@@ -516,9 +516,10 @@ object Form1: TForm1
     Left = 78
     Height = 14
     Top = 352
-    Width = 154
-    Caption = 'Instalação de componentes'
+    Width = 108
+    Caption = 'Instalar Programas'
     ParentColor = False
+    OnClick = Label3Click
   end
   object Image3: TImage
     Left = 363

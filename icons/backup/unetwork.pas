@@ -39,31 +39,22 @@ var
 implementation
 procedure TForm3.RadioGroup1Click(Sender: TObject);
   begin
+    //writeln('TForm3.CheckRadio1Click event dispareted');
     if RadioGroup1.ItemIndex = 0  then  begin
        uglobal.flag_proxy:= true;
-       if uglobal.flag_root = true
-       then  begin
-          commandlinestring:='--ativa_global_proxy';
-       end
-       else begin
-           commandlinestring :='--ativa_proxy';
-
-       end;
+       Self.commandlinestring :='--ativa_proxy';
+        //   writeln('args=',SELF.commandlinestring);
     end
     else begin
       uglobal.flag_proxy:= false;
-     // commandlinestring := '--desat1'
-      if uglobal.flag_root = true then
-          commandlinestring:='--desat_global_proxy'
-      else
-          commandlinestring :='--desat_proxy' ;
+      Self.commandlinestring :='--desat_proxy' ;
+          //writeln('args=',SELF.commandlinestring);
     end;
 
   end;
 
 procedure TForm3.FormCreate(Sender: TObject);
 begin
-     RadioGroup1.ItemIndex:=1;
 end;
 
   procedure TForm3.StaticText1Click(Sender: TObject);
@@ -73,7 +64,8 @@ end;
 
   procedure TForm3.CheckBox1Change(Sender: TObject);
   begin
-    writeln(Checkbox1.Checked);
+   // writeln(Checkbox1.Checked);
+  //  Self.RadioGroup1.ItemIndex:= -1;
     if CheckBox1.Checked =true
     then
        uglobal.flag_root:= true
@@ -83,22 +75,20 @@ end;
   procedure TForm3.Button2Click(Sender: TObject);
   begin
     ///commandlinestring:= '';
-    writeln(uglobal.flag_root);
-    args := TstringList.Create();
-    writeln(commandlinestring);
-    args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
-    args.Add(commandlinestring);
-    pst_call := RunnableScripts.Create(args);
-    if ( uglobal.flag_root = false ) then
-       pst_call.RunProcess()
-    else    begin
-        pst_call.RunProcessAsPoliceKit();
-    //end ;
-   // ShowMessage('exit proxy setting');
-  // Sleep(500);
-       uglobal.flag_root:= false;
+    if ( Self.RadioGroup1.ItemIndex <> -1 )  then begin
+        //  writeln(' From Tform3.Ok,flag root = ',uglobal.flag_root);
+          args := TstringList.Create();
+          //writeln('from bottuon2 cmd_line=',commandlinestring);
+          args.Add('/home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh');
+          args.Add(commandlinestring);
+          pst_call := RunnableScripts.Create(args);
+          if ( uglobal.flag_root = false ) then
+             pst_call.RunProcess()
+          else begin
+              pst_call.RunProcessAsPoliceKit();
+             uglobal.flag_root:= false;
+         end;
     end;
-
     Self.Close;
   end;
 
