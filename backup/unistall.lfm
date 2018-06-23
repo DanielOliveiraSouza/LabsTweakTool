@@ -7,6 +7,7 @@ object Form4: TForm4
   ClientHeight = 291
   ClientWidth = 367
   LCLVersion = '1.8.2.0'
+  Visible = False
   object RadioGroup1: TRadioGroup
     Left = 64
     Height = 129

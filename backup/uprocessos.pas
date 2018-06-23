@@ -126,8 +126,6 @@ begin
   writeln('');
    hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  // poNewConsole  é para terminais
    hprocess.Execute;         // Execute o comando
- // end;
-
   streamout:= TStringList.Create();
   failout := TStringList.Create();
   streamout.LoadFromStream(hprocess.Output);

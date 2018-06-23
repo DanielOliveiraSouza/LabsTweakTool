@@ -6,6 +6,7 @@ object Form1: TForm1
   Caption = 'PST Tweak Tool  ver:2.0-rc10-testing'
   ClientHeight = 584
   ClientWidth = 542
+  OnClose = FormClose
   OnCreate = FormCreate
   Visible = False
   object Label1: TLabel

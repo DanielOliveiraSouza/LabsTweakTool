@@ -31,6 +31,7 @@ type
     Label8: TLabel;
     Label9: TLabel;
     procedure BitBtn1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
 
 
@@ -79,6 +80,7 @@ procedure TForm1.Image1Click(Sender: TObject);
 begin
   //ShowMessage('Recurso a ser implementado');
   Fnetwork := TForm3.Create(nil) ;
+  Fnetwork.setFrameAnterior(Self);
   Fnetwork.ShowModal;
 end;
 
@@ -104,8 +106,9 @@ begin
   //cargs.Add('try.sh');
   //TesteProc:= RunnableScripts.Create(cargs);
   //TesteProc.RunProcess();
-  FAltHost := TForm5.Create(Self);
-  Self.Visible:=false;
+  FAltHost := TForm5.Create(nil);
+  FAltHost.SetframeAnterior(Self);
+  //Self.Visible:=false;
 //  Self.Show = false;
   FAltHost.ShowModal;
 end;
@@ -123,6 +126,11 @@ end;
 
 
 procedure TForm1.BitBtn1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
 
 end;

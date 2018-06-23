@@ -101,6 +101,7 @@ object Form2: TForm2
     Top = 336
     Width = 75
     Caption = 'Cancelar'
+    OnClick = Button2Click
     TabOrder = 6
   end
 end

@@ -6,8 +6,9 @@ object Form3: TForm3
   Caption = 'Rede'
   ClientHeight = 255
   ClientWidth = 293
+  OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.8.2.0'
+  Visible = False
   object RadioGroup1: TRadioGroup
     Left = 49
     Height = 104

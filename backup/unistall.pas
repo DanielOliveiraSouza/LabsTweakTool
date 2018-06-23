@@ -23,10 +23,12 @@ type
          args : TStringList;
          str_args : string;
          procInstall : uprocessos.RunnableScripts;
-         password : string ;
+         //password : string ;
+         frameAnterior : Tform;
 
   public
     procedure SingletonArgs();
+    procedure setFrameAnterior(ref :Tform) ;
   end;
 
 var
@@ -43,7 +45,7 @@ var
 begin
   cont := 0;
      Self.args := TStringList.Create() ;
-     Self.args.Add(uglobal.MAIN_PST_HOME);
+     Self.args.Add(uglobal.PST_HOME + '/main-pst.sh');
   while ( cont < Self.args.Count ) do
   begin
     writeln(self.args[cont]);
@@ -51,6 +53,12 @@ begin
   end;
  // Result := Self.args;
 
+end;
+
+procedure TForm4.setFrameAnterior(ref: Tform);
+begin
+  self.frameAnterior := ref;
+  self.frameAnterior.Visible:= false;
 end;
 
 procedure TForm4.Button1Click(Sender: TObject);

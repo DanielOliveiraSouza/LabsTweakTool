@@ -41,25 +41,28 @@ Begin
   DetectXTerm();  //função importante! Detecta o tipo de emulador de terminal
   hprocess := TProcess.Create(nil);
   hprocess.Executable := '/bin/bash';
-  while (i < (args.Count) ) do begin
-    write(args[i] + ' ');
-    hprocess.Parameters.Add(args[i]);
-    i := i  + 1;
-   end;
-  writeln('');
-   hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  // poNewConsole  é para terminais
-   hprocess.Execute;         // Execute o comando
- // end;
+  if ( self.args <> nil ) then begin
+    while (i < (args.Count) ) do begin
+      write(args[i] + ' ');
+      hprocess.Parameters.Add(args[i]);
+      i := i  + 1;
+     end;
+    writeln('');
+     hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  // poNewConsole  é para terminais
+     hprocess.Execute;         // Execute o comando
+   // end;
 
-  streamout:= TStringList.Create();
-  failout := TStringList.Create();
-  streamout.LoadFromStream(hprocess.Output);
-  streamout.SaveToFile('out.txt');
-  failout.LoadFromStream(hprocess.Stderr);
-  failout.SaveToFile('fail.txt');
-  //writeln(hprocess.ExitCode);
-   Sleep(2000);
-   hprocess.Free;
+      streamout:= TStringList.Create();
+      failout := TStringList.Create();
+      streamout.LoadFromStream(hprocess.Output);
+      streamout.SaveToFile('out.txt');
+      failout.LoadFromStream(hprocess.Stderr);
+      failout.SaveToFile('fail.txt');
+    //writeln(hprocess.ExitCode);
+     Sleep(2000);
+     hprocess.Free;
+  end else
+      Writeln('args is null');
 end;
 constructor RunnableScripts.Create ( c_args : TStringList);
 begin

@@ -6,6 +6,7 @@ object Form5: TForm5
   Caption = 'Alterar o Hostname'
   ClientHeight = 270
   ClientWidth = 400
+  OnClose = FormClose
   OnCreate = FormCreate
   Visible = False
   object Label1: TLabel

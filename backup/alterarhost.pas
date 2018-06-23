@@ -20,15 +20,17 @@ type
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
 
-    constructor Create (form :TForm);
+   // constructor Create (form :TForm);
   private
        args: TStringList;
        althost: uprocessos.RunnableScripts;
-       anterior : TForm;
+       frameAnterior : TForm;
        //initial_windows : ugui.Tform1;
   public
+    procedure SetframeAnterior(aux :Tform);
   end;
 
 var
@@ -46,6 +48,7 @@ begin
   //initial_windows:=TForm1.Create(nil);
   //initial_windows.ShowModal;
   //a//nterior.Visible:=True;
+  self.frameAnterior.Visible:=true;
   Self.Close;
 
 end;
@@ -62,6 +65,8 @@ begin
   // self.althost.RunProcessAsRoot();
     self.args.Free;
     self.althost.Free;
+    if (self.frameAnterior <> nil ) then
+       self.frameAnterior.Visible:=true;
     Self.Close;
   end else
       ShowMessage('O host não pode ser vazio');
@@ -69,19 +74,21 @@ begin
   //
 end;
 
+procedure TForm5.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+   if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
+end;
+
 procedure TForm5.FormCreate(Sender: TObject);
 begin
 
 end;
-
-constructor TForm5.Create(form: TForm);
-begin
- {Super.Create(nil);
-  Self.anterior := form;
-  anterior.Visible:=False;;
-  }
-  ShowMessage('Initialized new Tform5');
-end;
+   procedure TForm5.SetframeAnterior(aux :Tform);
+   begin
+     self.frameAnterior := aux;
+     self.frameAnterior.Visible:=false;
+   end;
 
 end.
 

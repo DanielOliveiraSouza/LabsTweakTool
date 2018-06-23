@@ -17,6 +17,7 @@ type
     Button2: TButton;
     CheckBox1: TCheckBox;
     RadioGroup1: TRadioGroup;
+     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
      procedure FormCreate(Sender: TObject);
      procedure RadioGroup1Click(Sender: TObject);
      procedure CheckBox1Change(Sender: TObject);
@@ -27,8 +28,10 @@ type
     commandlinestring:  String ;
     pst_call : uprocessos.RunnableScripts;
     args:  TstringList;
+    frameAnterior : Tform;
 
   public
+      procedure setFrameAnterior(ref : Tform);
 
   end;
 
@@ -55,6 +58,12 @@ procedure TForm3.RadioGroup1Click(Sender: TObject);
 
 procedure TForm3.FormCreate(Sender: TObject);
 begin
+end;
+
+procedure TForm3.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if ( Self.frameAnterior <> nil) then
+    self.frameAnterior.Visible:=true;
 end;
 
   procedure TForm3.StaticText1Click(Sender: TObject);
@@ -90,13 +99,21 @@ end;
              uglobal.flag_root:= false;
          end;
     end;
+    self.frameAnterior.Visible:=true;
     Self.Close;
+  end;
+
+  procedure TForm3.setFrameAnterior(ref: Tform);
+  begin
+    Self.frameAnterior := ref;
+    Self.frameAnterior.Visible:= false;
   end;
 
   procedure TForm3.Button1Click(Sender: TObject);
   begin
    // writeln('From form 3: dvançado');
     FProxy := TForm2.Create(nil);
+    FProxy.setFrameAnterior(Self);
     FProxy.ShowModal;
 
   end;

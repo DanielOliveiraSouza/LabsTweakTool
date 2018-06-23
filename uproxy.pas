@@ -52,6 +52,7 @@ type
     procedure Edit2Change(Sender: TObject);
     procedure Edit3Change(Sender: TObject);
     procedure Edit4Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
@@ -68,8 +69,9 @@ type
     proxyconfig : uprocessos.RunnableScripts;
     cont: integer;
     args: TStringList;
+    frameAnterior : Tform;
   public
-
+    procedure setFrameAnterior(ref : Tform) ;
 
   end;
 
@@ -106,7 +108,7 @@ end;
 procedure TForm2.Button1Click(Sender: TObject);
 begin
      Self.cont := 0;
-     if Self.Edit1.Text <> ''  then
+    { if Self.Edit1.Text <> ''  then
         args.Add(Self.Edit1.Text);
 
      if Self.Edit2.Text <> '' then
@@ -122,24 +124,64 @@ begin
                 self.args.Add('--use_login');
                 self.args.Add('0');
      end;
-     //args.SaveToFile();
-    // proxyconfig.Create(args);
-     while  cont < Self.args.Count do begin
-                write(self.args[cont] + ' ');
-                cont := cont  + 1;
+     }
+     if ( Self.Edit1.Text <> '' ) then  //se servidor proxy não vazio
+     begin    self.args.Add(Self.Edit1.Text);
+              if ( Self.Edit2.Text <> '' ) then   // se porta não é vazia
+              begin
+                       Self.args.Add(Self.Edit2.Text);
+                       if (  uglobal.flag_auth_proxy = true ) then //se o proxy é autenticado
+                       begin
+                                     Self.args.Add('--use-login');
+                                     Self.args.Add('1');                              //usuário não é vazio
+                                     if ( Self.Edit3.Text <> '' ) then begin
+                                                   self.args.Add(self.Edit4.Text);
+                                                   if ( Self.Edit4.Text <> ''  ) then begin     //senha não vazia
+                                                                 self.args.Add(self.Edit4.Text);
+                                                                 uglobal.flag_proxy_form_valid:= true;
+                                                   end;
+                                     end;
+                       end else begin
+                                  self.args.Add('--use_login');
+                                  self.args.Add('0');
+                                  uglobal.flag_proxy_form_valid:= true;
+                       end;
+              end;
      end;
-     writeln('');
-   //  writeln('From uproxy: Executando em modo teste, configurações ainda não escritas');
-     Self.Close();
+     //args.SaveToFile();
+     if ( uglobal.flag_proxy_form_valid = true )  then begin
+      proxyconfig := RunnableScripts.Create(Self.args);
+       cont := 0;
+         while  cont < Self.args.Count do begin
+                    write(self.args[cont] + ' ');
+                    cont := cont  + 1;
+         end;
+         writeln('');
+       //  writeln('From uproxy: Executando em modo teste, configurações ainda não escritas');
+    //     Self.Close();
 
-    // proxyconfig.RunProcess();
-  //self.runProcess();
-  //self.runProces1('/home/danny/scripts/helena');
+        // proxyconfig.RunProcess();
+        if ( uglobal.flag_root = false ) then
+          self.proxyconfig.runProcess()
+        else
+          Self.proxyconfig.RunProcessAsPoliceKit();
+          if ( Self.frameAnterior <> nil ) then
+            Self.frameAnterior.Visible:= true;
+        Self.Close;
+     end else  begin
+         if ( uglobal.flag_auth_proxy = true ) then
+         showMessage('servidor, porta, usuário e senha são  campos obrigatórios')
+         else
+           showMessage('servidor e porta são campos obrigatórios');
+     end
+    //self.runProces1('/home/danny/scripts/helena');
 
 end;
 
 procedure TForm2.Button2Click(Sender: TObject);
 begin
+     if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
         Self.Close;
 end;
 
@@ -162,6 +204,12 @@ end;
 procedure TForm2.Edit4Change(Sender: TObject);
 begin
   //Este é o campo de password do proxy autenticado
+end;
+
+procedure TForm2.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+   if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
 end;
 
 
@@ -201,7 +249,7 @@ procedure TForm2.ToggleBox1Change(Sender: TObject);
 begin
 
 end;
- Procedure TForm2.runProcess();
+  procedure TForm2.runProcess();
 var
 
     hprocess: TProcess;
@@ -275,7 +323,7 @@ Begin
    hprocess.Free;                                                      // Finally we free created instance
    }
  end;
-function  TForm2.runProces1(path:string ): String ;
+function TForm2.runProces1(path: String): String;
  var
    Proc: TProcess;
    CharBuffer: array [0..511] of char;
@@ -344,6 +392,13 @@ begin
         writeln('erro');
 
     end;
+end;
+
+procedure TForm2.setFrameAnterior(ref: Tform);
+begin
+  Self.frameAnterior := ref;
+  if ( Self.frameAnterior <> nil ) then
+    Self.frameAnterior.Visible:= false;
 end;
 
 
