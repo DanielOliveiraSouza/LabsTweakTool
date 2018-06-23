@@ -48,7 +48,8 @@ begin
   //initial_windows:=TForm1.Create(nil);
   //initial_windows.ShowModal;
   //a//nterior.Visible:=True;
-  self.frameAnterior.Visible:=true;
+  if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
   Self.Close;
 
 end;

@@ -8,6 +8,7 @@ object Form2: TForm2
   ClientWidth = 595
   OnClose = FormClose
   OnCreate = FormCreate
+  Position = poMainFormCenter
   Visible = False
   object Label1: TLabel
     Left = 85

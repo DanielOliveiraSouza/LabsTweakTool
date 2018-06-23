@@ -62,7 +62,8 @@ end;
 
 procedure TForm3.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  self.frameAnterior.Visible:=true;
+  if ( Self.frameAnterior <> nil) then
+    self.frameAnterior.Visible:=true;
 end;
 
   procedure TForm3.StaticText1Click(Sender: TObject);

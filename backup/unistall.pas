@@ -18,6 +18,7 @@ type
     RadioGroup1: TRadioGroup;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure RadioGroup1Click(Sender: TObject);
   private
          args : TStringList;
@@ -63,6 +64,8 @@ end;
 
 procedure TForm4.Button1Click(Sender: TObject);
 begin
+   if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
   Self.Close;
 end;
 
@@ -80,8 +83,16 @@ begin
     Self.procInstall.RunProcessAsPoliceKit();
     Self.procInstall.Free;
   end;
+   if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
   Self.Close;   //encerra o Tform
 
+end;
+
+procedure TForm4.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+   if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
 end;
 
 procedure TForm4.RadioGroup1Click(Sender: TObject);

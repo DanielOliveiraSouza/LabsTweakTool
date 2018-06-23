@@ -88,6 +88,7 @@ procedure TForm1.Image2Click(Sender: TObject);
 begin
   //ShowMessage('Recurso a ser implementado');
   FInstall:= TForm4.Create(nil);
+  FInstall.setFrameAnterior(Self);
   FInstall.ShowModal;
 end;
 

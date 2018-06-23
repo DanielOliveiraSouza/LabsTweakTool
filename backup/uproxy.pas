@@ -52,6 +52,7 @@ type
     procedure Edit2Change(Sender: TObject);
     procedure Edit3Change(Sender: TObject);
     procedure Edit4Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
@@ -203,6 +204,12 @@ end;
 procedure TForm2.Edit4Change(Sender: TObject);
 begin
   //Este é o campo de password do proxy autenticado
+end;
+
+procedure TForm2.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+   if (Self.frameAnterior <> nil )  then
+        self.frameAnterior.Visible:= true;
 end;
 
 
