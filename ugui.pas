@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, SynHighlighterIni, IDEWindowIntf, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, uproxy, uglobal,
-  uprocessos, unetwork, unistall,alterarhost;
+  Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, DbCtrls, uproxy,
+  uglobal, uprocessos, unetwork, unistall, alterarhost, uppa;
 
 type
 
@@ -31,6 +31,7 @@ type
     Label8: TLabel;
     Label9: TLabel;
     procedure BitBtn1Click(Sender: TObject);
+    procedure DBText1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
 
@@ -57,6 +58,8 @@ type
 
 
   public
+    //procedure initPSTErrorMsg();
+
 
   end;
 
@@ -67,6 +70,7 @@ var
   TesteProc : uprocessos.RunnableScripts;
   cargs: TstringList;
   FAltHost : TForm5;
+  FramePPA : TForm6;
 
 
 
@@ -116,17 +120,32 @@ end;
 
 procedure TForm1.Image5Click(Sender: TObject);
 begin
-
+  //código do ppa
+  FramePPA := TForm6.Create(nil);
+  FramePPA.setFrameAnterior(Self);
+  FramePPA.ShowModal;
 end;
 
 procedure TForm1.Image6Click(Sender: TObject);
+var
+  proc : RunnableScripts;
+  strteste : string;
 begin
+ cargs:= TStringList.Create;
+ cargs.Add('/tmp/install-java.sh');
+ proc := RunnableScripts.Create(cargs);
+ proc.RunProcessAsRootNoConsele();
 
 end;
 
 
 
 procedure TForm1.BitBtn1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.DBText1Click(Sender: TObject);
 begin
 
 end;
@@ -188,6 +207,9 @@ procedure TForm1.TaskDialog1ButtonClicked(Sender: TObject;
 begin
 
 end;
+
+
+
 
 end.
 

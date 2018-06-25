@@ -1,0 +1,1 @@
+PPA não é suportada por esta distribuição linux

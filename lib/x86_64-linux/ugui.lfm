@@ -1439,8 +1439,8 @@ object Form1: TForm1
     Left = 78
     Height = 14
     Top = 512
-    Width = 126
-    Caption = 'Execução de subrotina'
+    Width = 134
+    Caption = 'Recursos experimentais'
     ParentColor = False
   end
 end

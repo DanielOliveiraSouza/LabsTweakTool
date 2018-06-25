@@ -1,0 +1,13 @@
+Welcome to Bridge Root , exec: /bin/bash /home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh --add_ppa ppa:web8team/java
+
+Aviso: variável PST_HOME não está definida:
+Certifique que em  /root contenha os módulos do PST ...
+
+seu linux é: Debian GNU/Linux 9
+Lendo listas de pacotes...
+Construindo árvore de dependências...
+Lendo informação de estado...
+O seguinte pacote foi instalado automaticamente e já não é necessário:
+  gsfonts-x11
+Utilize 'apt autoremove' para o remover.
+0 pacotes atualizados, 0 pacotes novos instalados, 0 a serem removidos e 35 não atualizados.

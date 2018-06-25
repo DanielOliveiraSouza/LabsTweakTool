@@ -84,7 +84,8 @@ end;
   procedure TForm3.Button2Click(Sender: TObject);
   begin
     ///commandlinestring:= '';
-    if ( Self.RadioGroup1.ItemIndex <> -1 )  then begin
+    if ( Self.RadioGroup1.ItemIndex <> -1 )  then
+    begin
         //  writeln(' From Tform3.Ok,flag root = ',uglobal.flag_root);
           args := TstringList.Create();
           //writeln('from bottuon2 cmd_line=',commandlinestring);
@@ -98,6 +99,9 @@ end;
                 pst_call.RunProcessAsRoot();
              uglobal.flag_root:= false;
          end;
+       {  ShowMessage (integer.ToString(pst_call.getExitCode()));
+         ShowMessage (integer.ToString(pst_call.getExitStatus()));
+         }
     end;
     self.frameAnterior.Visible:=true;
     Self.Close;

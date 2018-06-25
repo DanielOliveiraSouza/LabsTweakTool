@@ -25,7 +25,7 @@ var
   PST_HOME : string = '/home/danny/scripts/pst/ver-2.0-rc10';                   // campo que contém o caminho dos módulos PST ( a ser implementado em futuro próximo)
 //  uglobal.PST_HOME + '/main-pst.sh' : string  = '';
   BRIDGE_ROOT: string = '/home/danny/scripts/pst/ver-2.0-rc10/bridge-root.sh';
-  VERSION : string ='PST 2.0-rc10-r05-01-2018' + sLineBreak + 'PST Tweak Tools by DanielTimelord'+ sLineBreak + '(c) 2014-2018' + sLineBreak + 'PST é um conjunto de ferramentas que  automatizam tarefas em laboratorios';
+  VERSION : string ='PST 2.0-rc10-r05-01-2018' + sLineBreak + 'PST Tweak Tools by DanielTimelord'+ sLineBreak +  sLineBreak+'(c) 2014-2018' + sLineBreak + 'PST é um conjunto de ferramentas que  automatizam tarefas em laboratorios';
   flag_proxy_form_valid : boolean  = false;
   erro_proxy_form : integer = -1;
   { convenção erro_proxy_form
@@ -37,6 +37,13 @@ var
   3  USUARIO
   4  SENHA
   }
+
+
+  //erros do script
+  ERROR_PPA_NOT_SUPPORTED : integer = 252;
+  ERROR_DIST_NOT_SUPPORTED : integer = 253;
+  PST_STR_INIT_LOG : string = 'Running PST main module, erros = 0';
+  PST_LOG_FILE : string = '/tmp/pst.log';
 
 
 
