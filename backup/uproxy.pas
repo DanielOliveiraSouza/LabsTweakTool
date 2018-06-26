@@ -164,7 +164,7 @@ begin
         if ( uglobal.flag_root = false ) then
           self.proxyconfig.runProcess()
         else
-          Self.proxyconfig.RunProcessAsPoliceKit();
+          Self.proxyconfig.RunProcessAsRoot();//Self.proxyconfig.RunProcessAsPoliceKit();
           if ( Self.frameAnterior <> nil ) then
             Self.frameAnterior.Visible:= true;
         Self.Close;

@@ -10,12 +10,12 @@ uses
 
 type
 
-  { TForm3 }
+  { TFnetwork }
 
-  TForm3 = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    CheckBox1: TCheckBox;
+  TFnetwork = class(TForm)
+    Button1: TButton;                //cancelar
+    Button2: TButton;                //ok
+    CheckBox1: TCheckBox;            //root ou não
     RadioGroup1: TRadioGroup;
      procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
      procedure FormCreate(Sender: TObject);
@@ -36,11 +36,11 @@ type
   end;
 
 var
-  Form3: TForm3;
-  FProxy: uproxy.TForm2;
+  Fnetwork: TFnetwork;
+  //FProxy: uproxy.TForm2;
 
 implementation
-procedure TForm3.RadioGroup1Click(Sender: TObject);
+procedure TFnetwork.RadioGroup1Click(Sender: TObject);
   begin
     //writeln('TForm3.CheckRadio1Click event dispareted');
     if RadioGroup1.ItemIndex = 0  then  begin
@@ -56,22 +56,22 @@ procedure TForm3.RadioGroup1Click(Sender: TObject);
 
   end;
 
-procedure TForm3.FormCreate(Sender: TObject);
+procedure TFnetwork.FormCreate(Sender: TObject);
 begin
 end;
 
-procedure TForm3.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TFnetwork.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   if ( Self.frameAnterior <> nil) then
     self.frameAnterior.Visible:=true;
 end;
 
-  procedure TForm3.StaticText1Click(Sender: TObject);
+  procedure TFnetwork.StaticText1Click(Sender: TObject);
   begin
 
   end;
 
-  procedure TForm3.CheckBox1Change(Sender: TObject);
+  procedure TFnetwork.CheckBox1Change(Sender: TObject);
   begin
    // writeln(Checkbox1.Checked);
   //  Self.RadioGroup1.ItemIndex:= -1;
@@ -81,7 +81,7 @@ end;
     else
         uglobal.flag_root:= false;
   end;
-  procedure TForm3.Button2Click(Sender: TObject);
+  procedure TFnetwork.Button2Click(Sender: TObject);
   begin
     ///commandlinestring:= '';
     if ( Self.RadioGroup1.ItemIndex <> -1 )  then
@@ -103,20 +103,21 @@ end;
          ShowMessage (integer.ToString(pst_call.getExitStatus()));
          }
     end;
-    self.frameAnterior.Visible:=true;
+    if ( Self.frameAnterior <> nil ) then
+       self.frameAnterior.Visible:=true;
     Self.Close;
   end;
 
-  procedure TForm3.setFrameAnterior(ref: Tform);
+  procedure TFnetwork.setFrameAnterior(ref: Tform);
   begin
     Self.frameAnterior := ref;
     Self.frameAnterior.Visible:= false;
   end;
 
-  procedure TForm3.Button1Click(Sender: TObject);
+  procedure TFnetwork.Button1Click(Sender: TObject);
   begin
    // writeln('From form 3: dvançado');
-    FProxy := TForm2.Create(nil);
+   // FProxy. := //TForm2.Create(nil);
     FProxy.setFrameAnterior(Self);
     FProxy.ShowModal;
 

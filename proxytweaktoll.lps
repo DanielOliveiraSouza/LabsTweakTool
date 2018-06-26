@@ -3,23 +3,24 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="11">
+    <Units Count="12">
       <Unit0>
         <Filename Value="proxytweaktoll.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="8"/>
-        <CursorPos X="7" Y="11"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="4"/>
+        <CursorPos Y="16"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="ugui.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="116"/>
-        <CursorPos X="34" Y="137"/>
+        <TopLine Value="71"/>
+        <CursorPos X="3" Y="97"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -27,12 +28,12 @@
       <Unit2>
         <Filename Value="uproxy.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form2"/>
+        <ComponentName Value="FProxy"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="209"/>
-        <CursorPos X="44" Y="212"/>
+        <TopLine Value="213"/>
+        <CursorPos Y="236"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -41,7 +42,7 @@
         <Filename Value="uglobal.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="21"/>
+        <TopLine Value="13"/>
         <CursorPos X="42" Y="46"/>
         <UsageCount Value="212"/>
         <Loaded Value="True"/>
@@ -49,201 +50,214 @@
       <Unit4>
         <Filename Value="uprocessos.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="152"/>
-        <CursorPos X="83" Y="170"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="244"/>
+        <CursorPos Y="223"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="icons/unetwork.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form3"/>
+        <ComponentName Value="Fnetwork"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="91"/>
-        <CursorPos X="11" Y="104"/>
-        <UsageCount Value="157"/>
+        <TopLine Value="102"/>
+        <CursorPos X="6" Y="122"/>
+        <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="unistall.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form4"/>
+        <ComponentName Value="FInstall"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="69"/>
-        <CursorPos X="95" Y="91"/>
-        <UsageCount Value="152"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="95"/>
+        <CursorPos X="3" Y="104"/>
+        <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="alterarhost.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form5"/>
+        <ComponentName Value="FAltHost"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="57"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="32"/>
         <CursorPos X="3" Y="59"/>
-        <UsageCount Value="97"/>
+        <UsageCount Value="148"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="uppa.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form6"/>
+        <ComponentName Value="FramePPA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="53"/>
-        <CursorPos X="64" Y="62"/>
-        <UsageCount Value="57"/>
+        <TopLine Value="37"/>
+        <CursorPos X="81" Y="60"/>
+        <UsageCount Value="108"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit8>
       <Unit9>
+        <Filename Value="ulistinstall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form7"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="42"/>
+        <CursorPos X="3" Y="51"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+      <Unit10>
         <Filename Value="../../../../lazarus/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="650"/>
         <CursorPos X="9" Y="746"/>
-        <UsageCount Value="8"/>
-      </Unit9>
-      <Unit10>
+        <UsageCount Value="3"/>
+      </Unit10>
+      <Unit11>
         <Filename Value="../../../../lazarus/lcl/include/customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2780"/>
         <CursorPos Y="2931"/>
-        <UsageCount Value="11"/>
-      </Unit10>
+        <UsageCount Value="6"/>
+      </Unit11>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="54" Column="25" TopLine="42"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="152" Column="27" TopLine="147"/>
       </Position1>
       <Position2>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="59" Column="86" TopLine="48"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="141" Column="39" TopLine="124"/>
       </Position2>
       <Position3>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="63" Column="26" TopLine="48"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="140" Column="13" TopLine="129"/>
       </Position3>
       <Position4>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="62" Column="43" TopLine="50"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="141" Column="52" TopLine="130"/>
       </Position4>
       <Position5>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="61" Column="81" TopLine="50"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="140" Column="11" TopLine="130"/>
       </Position5>
       <Position6>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="57" Column="27" TopLine="50"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="141" Column="3" TopLine="129"/>
       </Position6>
       <Position7>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="58" Column="44" TopLine="45"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="144" Column="11" TopLine="133"/>
       </Position7>
       <Position8>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="57" Column="19" TopLine="45"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="182" Column="3" TopLine="179"/>
       </Position8>
       <Position9>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="58" Column="41" TopLine="47"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="155" Column="3" TopLine="153"/>
       </Position9>
       <Position10>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="61" Column="33" TopLine="53"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="148" Column="72" TopLine="133"/>
       </Position10>
       <Position11>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="72" Column="2" TopLine="62"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="245" Column="35" TopLine="227"/>
       </Position11>
       <Position12>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="64" Column="32" TopLine="47"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="243" Column="61" TopLine="232"/>
       </Position12>
       <Position13>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="65" Column="36" TopLine="56"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="218" Column="33" TopLine="214"/>
       </Position13>
       <Position14>
-        <Filename Value="uppa.pas"/>
-        <Caret Line="67" Column="6" TopLine="56"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="168" Column="88" TopLine="153"/>
       </Position14>
       <Position15>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="60" Column="33" TopLine="50"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="224" Column="5" TopLine="209"/>
       </Position15>
       <Position16>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="197"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="182" Column="94" TopLine="158"/>
       </Position16>
       <Position17>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="103" Column="66" TopLine="86"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="149" Column="37" TopLine="127"/>
       </Position17>
       <Position18>
-        <Filename Value="uprocessos.pas"/>
-        <Caret Line="81" Column="6" TopLine="76"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="142" Column="36" TopLine="135"/>
       </Position18>
       <Position19>
-        <Filename Value="uprocessos.pas"/>
-        <Caret Line="85" Column="31" TopLine="80"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="147" Column="30" TopLine="132"/>
       </Position19>
       <Position20>
-        <Filename Value="icons/unetwork.pas"/>
-        <Caret Line="104" Column="11" TopLine="91"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="146" Column="8" TopLine="135"/>
       </Position20>
       <Position21>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="60" Column="7" TopLine="108"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="203" Column="86" TopLine="185"/>
       </Position21>
       <Position22>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="62" Column="7" TopLine="62"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="147" Column="24" TopLine="80"/>
       </Position22>
       <Position23>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="143" Column="3" TopLine="135"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="175" Column="30" TopLine="172"/>
       </Position23>
       <Position24>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="142" Column="3" TopLine="134"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="105" Column="84" TopLine="95"/>
       </Position24>
       <Position25>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="62" Column="40" TopLine="50"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="193" Column="2" TopLine="190"/>
       </Position25>
       <Position26>
-        <Filename Value="uprocessos.pas"/>
-        <Caret Line="70" Column="36" TopLine="51"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="158" Column="85" TopLine="64"/>
       </Position26>
       <Position27>
-        <Filename Value="uprocessos.pas"/>
-        <Caret Line="29" Column="48" TopLine="14"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="193" Column="2" TopLine="148"/>
       </Position27>
       <Position28>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="62" TopLine="143"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="175" Column="3" TopLine="185"/>
       </Position28>
       <Position29>
-        <Filename Value="ugui.pas"/>
-        <Caret Line="134" Column="8" TopLine="122"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="106" Column="6" TopLine="95"/>
       </Position29>
       <Position30>
-        <Filename Value="alterarhost.pas"/>
-        <Caret Line="80" Column="4" TopLine="31"/>
+        <Filename Value="unistall.pas"/>
+        <Caret Line="176" Column="4" TopLine="173"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

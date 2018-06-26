@@ -1,4 +1,4 @@
-object Form5: TForm5
+object FAltHost: TFAltHost
   Left = 253
   Height = 270
   Top = 159

@@ -9,9 +9,9 @@ unit uppa;
 
 	type
 
-	{ TForm6 }
+	{ TFramePPA }
 
-	TForm6 = class(TForm)
+	TFramePPA = class(TForm)
 		Button1: TButton;
 		Button2: TButton;
 		Edit1: TEdit;
@@ -31,7 +31,7 @@ unit uppa;
 		end;
 
 		var
-		Form6: TForm6;
+		FramePPA: TFramePPA;
 		msg_str : string;
 		global_cont : integer;
 
@@ -39,9 +39,9 @@ unit uppa;
 
 		{$R *.lfm}
 
-		{ TForm6 }
+		{ TFramePPA }
 
-		procedure TForm6.Button2Click(Sender: TObject); // botão ok
+		procedure TFramePPA.Button2Click(Sender: TObject); // botão ok
 		begin
 			if (Self.Edit1.Text <> '' ) then 
 			begin
@@ -75,25 +75,25 @@ unit uppa;
 
 		end;
 
-		procedure TForm6.FormClose(Sender: TObject; var CloseAction: TCloseAction);  //fechar janela
+		procedure TFramePPA.FormClose(Sender: TObject; var CloseAction: TCloseAction);  //fechar janela
 		begin
 			if ( Self.frameAnterior <> nil ) then    //habilita visibilidade da janela pai
 				Self.frameAnterior.Visible:= true;
 		end;
 
-		procedure TForm6.FormCreate(Sender: TObject);
+		procedure TFramePPA.FormCreate(Sender: TObject);
 		begin
 
 		end;
 
-		procedure TForm6.Button1Click(Sender: TObject);
+		procedure TFramePPA.Button1Click(Sender: TObject);
 		begin
 			if ( Self.frameAnterior <> nil ) then
 				Self.frameAnterior.Visible:= true;
 			Self.Close;
 		end;
 
-		procedure TForm6.setFrameAnterior(ref: Tform);
+		procedure TFramePPA.setFrameAnterior(ref: Tform);
 		begin
 			Self.frameAnterior := ref;
 			if ( Self.frameAnterior <> nil ) then

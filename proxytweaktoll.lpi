@@ -32,7 +32,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="9">
+    <Units Count="10">
       <Unit0>
         <Filename Value="proxytweaktoll.pas"/>
         <IsPartOfProject Value="True"/>
@@ -40,14 +40,14 @@
       <Unit1>
         <Filename Value="ugui.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
         <Filename Value="uproxy.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form2"/>
+        <ComponentName Value="FProxy"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit2>
@@ -62,31 +62,38 @@
       <Unit5>
         <Filename Value="icons/unetwork.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form3"/>
+        <ComponentName Value="Fnetwork"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit5>
       <Unit6>
         <Filename Value="unistall.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form4"/>
+        <ComponentName Value="FInstall"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit6>
       <Unit7>
         <Filename Value="alterarhost.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form5"/>
+        <ComponentName Value="FAltHost"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit7>
       <Unit8>
         <Filename Value="uppa.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form6"/>
+        <ComponentName Value="FramePPA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit8>
+      <Unit9>
+        <Filename Value="ulistinstall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form7"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit9>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

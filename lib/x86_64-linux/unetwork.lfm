@@ -1,4 +1,4 @@
-object Form3: TForm3
+object Fnetwork: TFnetwork
   Left = 24
   Height = 255
   Top = 125
@@ -9,7 +9,6 @@ object Form3: TForm3
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.8.2.0'
   Visible = False
   object RadioGroup1: TRadioGroup
     Left = 49

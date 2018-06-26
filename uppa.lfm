@@ -1,4 +1,4 @@
-object Form6: TForm6
+object FramePPA: TFramePPA
   Left = 0
   Height = 240
   Top = 0
@@ -9,7 +9,6 @@ object Form6: TForm6
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.8.2.0'
   Visible = False
   object Label1: TLabel
     Left = 46

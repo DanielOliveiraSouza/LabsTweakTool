@@ -59,7 +59,7 @@ unit uppa;
 				global_cont := 0;
 				if ( Self.debug <> nil  ) then 
 				begin
-					if (Self.debug[0] <> uglobal.PST_STR_INIT_LOG ) then
+					if (Self.debug[0] <> '' ) then
 					ShowMessage(Self.debug[0])
                                 end;
 			//var aux : StringList;

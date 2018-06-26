@@ -10,9 +10,9 @@ uses
 
 type
 
-  { TForm5 }
+  { TFAltHost }
 
-  TForm5 = class(TForm)
+  TFAltHost = class(TForm)
     Button1: TButton;
     Button2: TButton;
     EditHost: TEdit;
@@ -34,16 +34,16 @@ type
   end;
 
 var
-  Form5: TForm5;
+  FAltHost: TFAltHost;
   //initial_window : Tform1;
 
 implementation
   //uses ugui;
 {$R *.lfm}
 
-{ TForm5 }
+{ TFAltHost }
 
-procedure TForm5.Button1Click(Sender: TObject);
+procedure TFAltHost.Button1Click(Sender: TObject);
 begin
   //initial_windows:=TForm1.Create(nil);
   //initial_windows.ShowModal;
@@ -54,7 +54,7 @@ begin
 
 end;
 
-procedure TForm5.Button2Click(Sender: TObject);
+procedure TFAltHost.Button2Click(Sender: TObject);
 begin
   if ( Self.EditHost.Text <> '' ) then begin
     self.args := TStringList.Create;
@@ -75,17 +75,17 @@ begin
   //
 end;
 
-procedure TForm5.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TFAltHost.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
    if (Self.frameAnterior <> nil )  then
         self.frameAnterior.Visible:= true;
 end;
 
-procedure TForm5.FormCreate(Sender: TObject);
+procedure TFAltHost.FormCreate(Sender: TObject);
 begin
 
 end;
-   procedure TForm5.SetframeAnterior(aux :Tform);
+   procedure TFAltHost.SetframeAnterior(aux :Tform);
    begin
      self.frameAnterior := aux;
      self.frameAnterior.Visible:=false;

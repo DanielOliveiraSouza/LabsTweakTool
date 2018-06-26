@@ -7,13 +7,13 @@ interface
 uses
   Classes, SysUtils, FileUtil, SynHighlighterIni, IDEWindowIntf, Forms,
   Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, DbCtrls, uproxy,
-  uglobal, uprocessos, unetwork, unistall, alterarhost, uppa;
+  uglobal, uprocessos, unetwork, unistall, alterarhost, uppa,ulistinstall;
 
 type
 
-  { TForm1 }
+  { TFMain }
 
-  TForm1 = class(TForm)
+  TFMain = class(TForm)
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
@@ -64,13 +64,13 @@ type
   end;
 
 var
-  Form1: TForm1;
-  Fnetwork : TForm3;
-  FInstall :TForm4;
+  FMain: TFMain;
+  //Fnetwork : TForm3;
+//  FInstall :TForm4;
   TesteProc : uprocessos.RunnableScripts;
   cargs: TstringList;
-  FAltHost : TForm5;
-  FramePPA : TForm6;
+ // FAltHost : TForm5;
+ // FramePPA : TForm6;
 
 
 
@@ -78,25 +78,27 @@ implementation
 
 {$R *.lfm}
 
-{ TForm1 }
+{ TFMain }
 
-procedure TForm1.Image1Click(Sender: TObject);
+procedure TFMain.Image1Click(Sender: TObject);
 begin
   //ShowMessage('Recurso a ser implementado');
-  Fnetwork := TForm3.Create(nil) ;
-  Fnetwork.setFrameAnterior(Self);
-  Fnetwork.ShowModal;
+ // Fnetwork := TForm3.Create(Application) ;
+ //FMain.Visible:= false;
+ Fnetwork.setFrameAnterior(Self);
+ Fnetwork.ShowModal;
+  //Fnetwork.ShowModal;
 end;
 
-procedure TForm1.Image2Click(Sender: TObject);
+procedure TFMain.Image2Click(Sender: TObject);
 begin
   //ShowMessage('Recurso a ser implementado');
-  FInstall:= TForm4.Create(nil);
+ // FInstall:= TForm4.Create(nil);
   FInstall.setFrameAnterior(Self);
   FInstall.ShowModal;
 end;
 
-procedure TForm1.Image3Click(Sender: TObject);
+procedure TFMain.Image3Click(Sender: TObject);
 var
   args : TStringList;
 begin
@@ -105,97 +107,105 @@ begin
 
 end;
 
-procedure TForm1.Image4Click(Sender: TObject);
+procedure TFMain.Image4Click(Sender: TObject);
 begin
   //cargs := TStringList.Create;
   //cargs.Add('try.sh');
   //TesteProc:= RunnableScripts.Create(cargs);
   //TesteProc.RunProcess();
-  FAltHost := TForm5.Create(nil);
+  //FAltHost := TForm5.Create(nil);
   FAltHost.SetframeAnterior(Self);
   //Self.Visible:=false;
 //  Self.Show = false;
   FAltHost.ShowModal;
 end;
 
-procedure TForm1.Image5Click(Sender: TObject);
+procedure TFMain.Image5Click(Sender: TObject);
 begin
   //código do ppa
-  FramePPA := TForm6.Create(nil);
+ // FramePPA := TForm6.Create(nil);
   FramePPA.setFrameAnterior(Self);
   FramePPA.ShowModal;
 end;
 
-procedure TForm1.Image6Click(Sender: TObject);
+procedure TFMain.Image6Click(Sender: TObject);
+var
+  proc : RunnableScripts;
+  strteste : string;
+begin
+ cargs:= TStringList.Create;
+ cargs.Add('/tmp/install-java.sh');
+ proc := RunnableScripts.Create(cargs);
+ proc.RunProcessAsRoot();
+// proc.RunProcessAsRootNoConsle();
+
+end;
+
+
+
+procedure TFMain.BitBtn1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TFMain.DBText1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TFMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+
+end;
+
+procedure TFMain.FormCreate(Sender: TObject);
 begin
 
 end;
 
 
 
-procedure TForm1.BitBtn1Click(Sender: TObject);
+procedure TFMain.Label2Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.DBText1Click(Sender: TObject);
+procedure TFMain.Label3Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TFMain.Label4Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TFMain.Label5Click(Sender: TObject);
 begin
 
 end;
 
-
-
-procedure TForm1.Label2Click(Sender: TObject);
+procedure TFMain.Label6Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.Label3Click(Sender: TObject);
+procedure TFMain.Label7Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.Label4Click(Sender: TObject);
+procedure TFMain.Label8Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.Label5Click(Sender: TObject);
+procedure TFMain.Label9Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.Label6Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Label7Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Label8Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Label9Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.TaskDialog1ButtonClicked(Sender: TObject;
+procedure TFMain.TaskDialog1ButtonClicked(Sender: TObject;
   AModalResult: TModalResult; var ACanClose: Boolean);
 begin
 

@@ -1,17 +1,19 @@
-object Form4: TForm4
+object FInstall: TFInstall
   Left = 603
-  Height = 291
+  Height = 396
   Top = 231
   Width = 367
   Caption = 'Guia de Instalação'
-  ClientHeight = 291
+  ClientHeight = 396
   ClientWidth = 367
   OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
   Visible = False
   object RadioGroup1: TRadioGroup
     Left = 64
     Height = 129
-    Top = 49
+    Top = 48
     Width = 248
     AutoFill = True
     Caption = 'Selecione um item para instalar'
@@ -37,7 +39,7 @@ object Form4: TForm4
   object Button1: TButton
     Left = 64
     Height = 25
-    Top = 193
+    Top = 198
     Width = 75
     Caption = 'Cancelar'
     OnClick = Button1Click
@@ -46,10 +48,39 @@ object Form4: TForm4
   object Button2: TButton
     Left = 237
     Height = 25
-    Top = 193
+    Top = 198
     Width = 75
     Caption = 'OK'
     OnClick = Button2Click
     TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 0
+    Height = 90
+    Top = 306
+    Width = 367
+    Align = alBottom
+    Color = clBtnText
+    OnChange = Memo1Change
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+  end
+  object CheckBox1: TCheckBox
+    Left = 16
+    Height = 32
+    Top = 260
+    Width = 32
+    OnChange = CheckBox1Change
+    TabOrder = 4
+  end
+  object ProgressBar1: TProgressBar
+    Left = 64
+    Height = 28
+    Top = 264
+    Width = 252
+    OnContextPopup = ProgressBar1ContextPopup
+    Style = pbstMarquee
+    TabOrder = 5
   end
 end
