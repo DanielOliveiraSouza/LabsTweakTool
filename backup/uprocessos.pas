@@ -140,8 +140,8 @@ end;
            else
                hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];
             hprocess.Execute;
-        //    Self.strError := TStringList.Create;
-          //  Self.strOut := TStringList.Create;
+           Self.strError := TStringList.Create;
+            Self.strOut := TStringList.Create;
             Self.exitCode:= hprocess.ExitCode;
             Self.exitStatus:= hprocess.ExitStatus;
             Self.strError.LoadFromStream(hprocess.Stderr);
@@ -219,7 +219,7 @@ begin
   //Self.strError := TStringList.Create;
   Self.strError.LoadFromStream(hprocess.Stderr);
   Self.strError.SaveToFile('err.txt');
-  //Self.strOut := TStringList.Create;
+  Self.strOut := TStringList.Create;
   Self.strOut.LoadFromStream(hprocess.Output);
   Self.strOut.SaveToFile('out.txt');
    hprocess.Free;

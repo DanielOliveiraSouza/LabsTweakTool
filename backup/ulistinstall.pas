@@ -19,6 +19,7 @@ type
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     function getListInstall(Sender: TObject) : string ;
@@ -47,7 +48,7 @@ end;
 
 function TForm7.getListInstall(Sender: TObject): string;
 begin
-  if (  Self.Edit1.Text <> nil )  then
+  if (  Self.Edit1.Text <> '' )  then
      begin
      Result := ' ' + Self.Edit1.Text;
      end else
@@ -64,6 +65,11 @@ end;
 procedure TForm7.Button2Click(Sender: TObject);
 begin
  // Self.str_args:= self;
+end;
+
+procedure TForm7.Edit1Change(Sender: TObject);
+begin
+
 end;
 
 procedure TForm7.FormClose(Sender: TObject; var CloseAction: TCloseAction);

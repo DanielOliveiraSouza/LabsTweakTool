@@ -1,5 +1,5 @@
 object FramePPA: TFramePPA
-  Left = 0
+  Left = 7
   Height = 240
   Top = 0
   Width = 319
@@ -9,7 +9,7 @@ object FramePPA: TFramePPA
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  Visible = False
+  LCLVersion = '1.8.2.0'
   object Label1: TLabel
     Left = 46
     Height = 19

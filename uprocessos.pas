@@ -66,7 +66,7 @@ Begin
         i := i  + 1;
       end;
       writeln('');
-      writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
+     // writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
       hprocess.Options:= hprocess.Options + [poWaitOnExit,poUsePipes,poNoConsole];
       // hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  // poNewConsole  é para terminais
       hprocess.Execute;         // Execute o comando
@@ -78,7 +78,7 @@ Begin
       Self.strOut := TStringList.Create;
       Self.strOut.LoadFromStream(hprocess.Output);
       Self.strOut.SaveToFile('out.txt');
-      writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
+    //  writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
        //Sleep(2000);
     end else
         Writeln('args is null');
@@ -140,8 +140,8 @@ end;
            else
                hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];
             hprocess.Execute;
-        //    Self.strError := TStringList.Create;
-          //  Self.strOut := TStringList.Create;
+           Self.strError := TStringList.Create;
+            Self.strOut := TStringList.Create;
             Self.exitCode:= hprocess.ExitCode;
             Self.exitStatus:= hprocess.ExitStatus;
             Self.strError.LoadFromStream(hprocess.Stderr);

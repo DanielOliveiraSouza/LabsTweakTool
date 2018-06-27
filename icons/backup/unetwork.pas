@@ -117,7 +117,7 @@ end;
   procedure TFnetwork.Button1Click(Sender: TObject);
   begin
    // writeln('From form 3: dvançado');
-    FProxy := TForm2.Create(nil);
+   // FProxy. := //TForm2.Create(nil);
     FProxy.setFrameAnterior(Self);
     FProxy.ShowModal;
 

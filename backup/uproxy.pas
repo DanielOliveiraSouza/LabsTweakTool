@@ -25,9 +25,9 @@ uses
 
 type
 
-  { TForm2 }
+  { TFProxy }
 
-  TForm2 = class(TForm)
+  TFProxy = class(TForm)
     Button1: TButton;
     Button2: TButton;
     CheckBox1: TCheckBox;
@@ -76,20 +76,20 @@ type
   end;
 
 var
-  Form2: TForm2;
+  FProxy: TFProxy;
 
 implementation
 
 {$R *.lfm}
 
-{ TForm2 }
+{ TFProxy }
 
-procedure TForm2.Label1Click(Sender: TObject);
+procedure TFProxy.Label1Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm2.CheckBox1Change(Sender: TObject);
+procedure TFProxy.CheckBox1Change(Sender: TObject);
 begin
       if (Self.CheckBox1.Checked) then  begin//se o proxy é autenticado
                Self.Edit3.ReadOnly:=false;
@@ -105,7 +105,7 @@ begin
 
 end;
 
-procedure TForm2.Button1Click(Sender: TObject);
+procedure TFProxy.Button1Click(Sender: TObject);
 begin
      Self.cont := 0;
     { if Self.Edit1.Text <> ''  then
@@ -178,42 +178,42 @@ begin
 
 end;
 
-procedure TForm2.Button2Click(Sender: TObject);
+procedure TFProxy.Button2Click(Sender: TObject);
 begin
      if (Self.frameAnterior <> nil )  then
         self.frameAnterior.Visible:= true;
         Self.Close;
 end;
 
-procedure TForm2.Edit1Change(Sender: TObject);
+procedure TFProxy.Edit1Change(Sender: TObject);
 begin
       //verificar se a string é um IP ou HOST
 end;
 
-procedure TForm2.Edit2Change(Sender: TObject);
+procedure TFProxy.Edit2Change(Sender: TObject);
 begin
   //Verificar se a string é um numero
 
 end;
 
-procedure TForm2.Edit3Change(Sender: TObject);
+procedure TFProxy.Edit3Change(Sender: TObject);
 begin
   // este é o campo de usuário, só preenche ele se o proxy for autneticado
 end;
 
-procedure TForm2.Edit4Change(Sender: TObject);
+procedure TFProxy.Edit4Change(Sender: TObject);
 begin
   //Este é o campo de password do proxy autenticado
 end;
 
-procedure TForm2.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TFProxy.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
    if (Self.frameAnterior <> nil )  then
         self.frameAnterior.Visible:= true;
 end;
 
 
-procedure TForm2.FormCreate(Sender: TObject);
+procedure TFProxy.FormCreate(Sender: TObject);
 begin
       //ao inicializar , bloquear os campos de usuário e senha
       Self.Edit3.ReadOnly:=true;
@@ -224,32 +224,32 @@ begin
 
 end;
 
-procedure TForm2.Label2Click(Sender: TObject);
+procedure TFProxy.Label2Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm2.Label3Click(Sender: TObject);
+procedure TFProxy.Label3Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm2.Memo2Change(Sender: TObject);
+procedure TFProxy.Memo2Change(Sender: TObject);
 begin
 
 end;
 
-procedure TForm2.TaskDialog1ButtonClicked(Sender: TObject;
+procedure TFProxy.TaskDialog1ButtonClicked(Sender: TObject;
   AModalResult: TModalResult; var ACanClose: Boolean);
 begin
 
 end;
 
-procedure TForm2.ToggleBox1Change(Sender: TObject);
+procedure TFProxy.ToggleBox1Change(Sender: TObject);
 begin
 
 end;
-  procedure TForm2.runProcess();
+  procedure TFProxy.runProcess();
 var
 
     hprocess: TProcess;
@@ -323,7 +323,7 @@ Begin
    hprocess.Free;                                                      // Finally we free created instance
    }
  end;
-function TForm2.runProces1(path: String): String;
+function TFProxy.runProces1(path: String): String;
  var
    Proc: TProcess;
    CharBuffer: array [0..511] of char;
@@ -394,7 +394,7 @@ begin
     end;
 end;
 
-procedure TForm2.setFrameAnterior(ref: Tform);
+procedure TFProxy.setFrameAnterior(ref: Tform);
 begin
   Self.frameAnterior := ref;
   if ( Self.frameAnterior <> nil ) then

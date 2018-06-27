@@ -9,7 +9,7 @@ object FProxy: TFProxy
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  Visible = False
+  LCLVersion = '1.8.2.0'
   object Label1: TLabel
     Left = 85
     Height = 14
@@ -98,7 +98,7 @@ object FProxy: TFProxy
     TabOrder = 5
   end
   object Button2: TButton
-    Left = 128
+    Left = 197
     Height = 33
     Top = 336
     Width = 75

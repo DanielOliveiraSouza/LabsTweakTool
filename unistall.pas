@@ -101,9 +101,13 @@ var
  p, ReadCount: integer;
  strExt, strTemp: string;
 begin
-  memo1.Clear;
-   progressbar1.Visible:=true;
-   //ProgressBar1.Enabled:= true;
+  //sleep(2000);
+ progressBar1.Position:= 0;
+  //ProgressBar1.Visible := true;
+  ProgressBar1.Style:=pbstMarquee;
+  memo1.Lines.Clear;
+   writeln('progress_bar.visible=',ProgressBar1.Visible);
+
   //verificar se um item válido foi selecionado
   if ( Self.RadioGroup1.ItemIndex <> -1 ) then
   begin
@@ -119,6 +123,7 @@ begin
   writeln('Run as bridge root');
   DetectXTerm();  //função importante! Detecta o tipo de emulador de terminal
   hprocess := TProcess.Create(nil);
+
   hprocess.Executable := '/bin/bash';
   hprocess.Parameters.Add(uglobal.BRIDGE_ROOT); //caminho do script bridge
   hprocess.Parameters.Add('/bin/bash');
@@ -134,18 +139,32 @@ begin
    exitStatus:= hprocess.ExitStatus;
    while ( hprocess.Running ) or (hprocess.Output.NumBytesAvailable > 0)  do
    begin
+      if ( ProgressBar1.Position < ProgressBar1.Max ) then
+               ProgressBar1.Position:= ProgressBar1.Position + 25
+            else
+                ProgressBar1.Position:= 0;
       if  (hprocess.Output.NumBytesAvailable > 0 ) then // while (hprocess.Output.NumBytesAvailable > 0 ) do
        begin
         ReadCount := Min(512, hprocess.Output.NumBytesAvailable); //Read up to buffer, not more
             hprocess.Output.Read(CharBuffer, ReadCount);
             strTemp:= Copy(CharBuffer, 0, ReadCount);
-            writeln(strTemp);
+            write(strTemp);
             Memo1.Lines.Add(strTemp);
-             progressbar1.Smooth:=true;
+            // progressbar1.Smooth:=true;
+
        end
    end;
+         // progressbar1.Position:=ProgressBar1.Max;
+          hprocess.Free;
+
+         // ProgressBar1.Visible:=false;
+         ProgressBar1.Style:=pbstNormal;
    end;
-   progressbar1.visible:=false;
+  if ( Self.frameAnterior <> nil ) then
+   self.frameAnterior.Visible:=true;
+
+  Self.Close;
+//
 end;
 
 procedure TFInstall.CheckBox1Change(Sender: TObject);
@@ -172,8 +191,9 @@ end;
 
 procedure TFInstall.FormCreate(Sender: TObject);
 begin
-  Memo1.Font.Color:= cllime;
- // ProgressBar1.Visible:=false;
+  Self.Memo1.Font.Color:= cllime;
+ // Self.ProgressBar1.Visible:=false;
+ //:=false;
 end;
 
 procedure TFInstall.Memo1Change(Sender: TObject);
@@ -191,6 +211,7 @@ procedure TFInstall.RadioGroup1Click(Sender: TObject);
 
 begin
  // Self.SingletonArgs();
+ // ProgressBar1.Position:= 0;
      case    self.RadioGroup1.ItemIndex  of
        0: Self.str_args:= '--t'; // Self.sargs.add('--i-t');
        1: Self.str_args := '--i-e';//Self.args.add('--i-e');

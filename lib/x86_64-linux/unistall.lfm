@@ -1,20 +1,20 @@
 object FInstall: TFInstall
-  Left = 603
-  Height = 396
-  Top = 231
-  Width = 367
+  Left = 732
+  Height = 388
+  Top = 206
+  Width = 355
   Caption = 'Guia de Instalação'
-  ClientHeight = 396
-  ClientWidth = 367
+  ClientHeight = 388
+  ClientWidth = 355
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  Visible = False
+  LCLVersion = '1.8.2.0'
   object RadioGroup1: TRadioGroup
-    Left = 64
-    Height = 129
-    Top = 48
-    Width = 248
+    Left = 56
+    Height = 156
+    Top = 24
+    Width = 253
     AutoFill = True
     Caption = 'Selecione um item para instalar'
     ChildSizing.LeftRightSpacing = 6
@@ -24,8 +24,8 @@ object FInstall: TFInstall
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 111
-    ClientWidth = 246
+    ClientHeight = 138
+    ClientWidth = 251
     Items.Strings = (
       'Atualizar e Instalar '
       'Apenas Instalar'
@@ -37,28 +37,28 @@ object FInstall: TFInstall
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 64
-    Height = 25
-    Top = 198
-    Width = 75
+    Left = 56
+    Height = 27
+    Top = 200
+    Width = 76
     Caption = 'Cancelar'
     OnClick = Button1Click
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 237
-    Height = 25
-    Top = 198
-    Width = 75
+    Left = 240
+    Height = 27
+    Top = 200
+    Width = 76
     Caption = 'OK'
     OnClick = Button2Click
     TabOrder = 2
   end
   object Memo1: TMemo
     Left = 0
-    Height = 90
-    Top = 306
-    Width = 367
+    Height = 97
+    Top = 291
+    Width = 355
     Align = alBottom
     Color = clBtnText
     OnChange = Memo1Change
@@ -67,20 +67,19 @@ object FInstall: TFInstall
     Visible = False
   end
   object CheckBox1: TCheckBox
-    Left = 16
+    Left = 56
     Height = 32
-    Top = 260
+    Top = 256
     Width = 32
     OnChange = CheckBox1Change
     TabOrder = 4
   end
   object ProgressBar1: TProgressBar
-    Left = 64
-    Height = 28
-    Top = 264
-    Width = 252
+    Left = 56
+    Height = 21
+    Top = 232
+    Width = 253
     OnContextPopup = ProgressBar1ContextPopup
-    Style = pbstMarquee
     TabOrder = 5
     Visible = False
   end

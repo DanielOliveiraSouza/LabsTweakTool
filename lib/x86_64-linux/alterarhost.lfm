@@ -1,54 +1,55 @@
 object FAltHost: TFAltHost
-  Left = 253
-  Height = 270
-  Top = 159
-  Width = 400
+  Left = 373
+  Height = 231
+  Top = 242
+  Width = 313
   Caption = 'Alterar o Hostname'
-  ClientHeight = 270
-  ClientWidth = 400
+  ClientHeight = 231
+  ClientWidth = 313
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  Visible = False
+  LCLVersion = '1.8.2.0'
   object Label1: TLabel
-    Left = 56
-    Height = 22
-    Top = 40
-    Width = 292
-    Caption = 'Configuração de Hostname'
+    Left = 80
+    Height = 44
+    Top = 24
+    Width = 143
+    Caption = 'Configuração'#10'de Hostname'
     Font.Height = -19
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+    OnClick = Label1Click
   end
   object EditHost: TEdit
     Left = 56
     Height = 29
     Top = 112
-    Width = 296
+    Width = 200
     TabOrder = 0
   end
   object Button1: TButton
     Left = 56
     Height = 25
-    Top = 176
+    Top = 168
     Width = 75
     Caption = 'Cancelar'
     OnClick = Button1Click
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 277
+    Left = 181
     Height = 25
-    Top = 176
+    Top = 168
     Width = 75
     Caption = 'Salvar'
     OnClick = Button2Click
     TabOrder = 2
   end
   object Label2: TLabel
-    Left = 56
+    Left = 64
     Height = 15
     Top = 96
     Width = 184

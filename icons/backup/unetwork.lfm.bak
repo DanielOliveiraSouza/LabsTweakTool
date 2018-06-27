@@ -1,19 +1,19 @@
 object Fnetwork: TFnetwork
-  Left = 24
-  Height = 255
-  Top = 125
-  Width = 293
+  Left = 398
+  Height = 429
+  Top = 175
+  Width = 595
   Caption = 'Rede'
-  ClientHeight = 255
-  ClientWidth = 293
+  ClientHeight = 429
+  ClientWidth = 595
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  Visible = False
+  LCLVersion = '1.8.2.0'
   object RadioGroup1: TRadioGroup
-    Left = 49
+    Left = 208
     Height = 104
-    Top = 24
+    Top = 89
     Width = 200
     AutoFill = True
     Caption = 'Ativar proxy?'
@@ -34,27 +34,27 @@ object Fnetwork: TFnetwork
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 160
+    Left = 319
     Height = 25
-    Top = 184
+    Top = 249
     Width = 89
     Caption = 'Avançado'
     OnClick = Button1Click
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 48
+    Left = 207
     Height = 25
-    Top = 184
+    Top = 249
     Width = 88
     Caption = 'OK'
     OnClick = Button2Click
     TabOrder = 2
   end
   object CheckBox1: TCheckBox
-    Left = 49
+    Left = 208
     Height = 32
-    Top = 144
+    Top = 209
     Width = 205
     Caption = ' Global Proxy ( precisa do root)'
     OnChange = CheckBox1Change

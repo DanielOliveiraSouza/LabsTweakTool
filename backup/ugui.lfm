@@ -1,15 +1,15 @@
 object FMain: TFMain
-  Left = 445
-  Height = 584
-  Top = 76
+  Left = 434
+  Height = 542
+  Top = 220
   Width = 542
   Caption = 'PST Tweak Tool  ver:2.0-rc10-testing'
-  ClientHeight = 584
+  ClientHeight = 542
   ClientWidth = 542
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  Visible = False
+  LCLVersion = '1.8.2.0'
   object Label1: TLabel
     Left = 97
     Height = 1
@@ -1442,5 +1442,12 @@ object FMain: TFMain
     Width = 134
     Caption = 'Recursos experimentais'
     ParentColor = False
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 19
+    Top = 523
+    Width = 542
+    Panels = <>
   end
 end

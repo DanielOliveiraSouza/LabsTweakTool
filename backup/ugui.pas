@@ -6,8 +6,9 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, SynHighlighterIni, IDEWindowIntf, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, DbCtrls, uproxy,
-  uglobal, uprocessos, unetwork, unistall, alterarhost, uppa,ulistinstall;
+  Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, DbCtrls, ComCtrls,
+  uproxy, uglobal, uprocessos, unetwork, unistall, alterarhost, uppa,
+  ulistinstall;
 
 type
 
@@ -30,6 +31,7 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
+    StatusBar1: TStatusBar;
     procedure BitBtn1Click(Sender: TObject);
     procedure DBText1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);

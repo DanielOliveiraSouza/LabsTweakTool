@@ -22,6 +22,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
 
    // constructor Create (form :TForm);
   private
@@ -62,7 +63,8 @@ begin
     self.args.Add('--at_hostname');
     self.args.Add(Self.EditHost.Text);
     self.althost:= RunnableScripts.Create(self.args);
-    self.althost.RunProcessAsPoliceKit();
+    //self.althost.RunProcessAsPoliceKit();
+    self.althost.RunProcessAsRoot();
   // self.althost.RunProcessAsRoot();
     self.args.Free;
     self.althost.Free;
@@ -85,6 +87,12 @@ procedure TFAltHost.FormCreate(Sender: TObject);
 begin
 
 end;
+
+procedure TFAltHost.Label1Click(Sender: TObject);
+begin
+
+end;
+
    procedure TFAltHost.SetframeAnterior(aux :Tform);
    begin
      self.frameAnterior := aux;
