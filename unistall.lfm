@@ -1,10 +1,10 @@
 object FInstall: TFInstall
   Left = 732
-  Height = 388
-  Top = 206
+  Height = 372
+  Top = 207
   Width = 355
   Caption = 'Guia de Instalação'
-  ClientHeight = 388
+  ClientHeight = 372
   ClientWidth = 355
   OnClose = FormClose
   OnCreate = FormCreate
@@ -39,16 +39,16 @@ object FInstall: TFInstall
   object Button1: TButton
     Left = 56
     Height = 27
-    Top = 200
+    Top = 216
     Width = 76
     Caption = 'Cancelar'
     OnClick = Button1Click
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 240
+    Left = 233
     Height = 27
-    Top = 200
+    Top = 216
     Width = 76
     Caption = 'OK'
     OnClick = Button2Click
@@ -57,30 +57,20 @@ object FInstall: TFInstall
   object Memo1: TMemo
     Left = 0
     Height = 97
-    Top = 291
+    Top = 275
     Width = 355
     Align = alBottom
     Color = clBtnText
     OnChange = Memo1Change
     ParentFont = False
     TabOrder = 3
-    Visible = False
   end
   object CheckBox1: TCheckBox
     Left = 56
     Height = 32
-    Top = 256
+    Top = 184
     Width = 32
     OnChange = CheckBox1Change
     TabOrder = 4
-  end
-  object ProgressBar1: TProgressBar
-    Left = 56
-    Height = 21
-    Top = 232
-    Width = 253
-    OnContextPopup = ProgressBar1ContextPopup
-    TabOrder = 5
-    Visible = False
   end
 end

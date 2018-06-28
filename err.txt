@@ -1,1 +1,1 @@
-Error executing command as another user: Request dismissed
+//home/danny/scripts/pst/ver-2.0-rc10//pst.sh: linha 68: [: número excessivo de argumentos

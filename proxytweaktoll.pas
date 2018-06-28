@@ -1,12 +1,12 @@
 program proxytweaktoll;
 
 {$mode objfpc}{$H+}
-
 uses
-  {$IFDEF UNIX}{$IFDEF UseCThreads}
+{$ifdef unix}
   cthreads,
-  {$ENDIF}{$ENDIF}
-  Interfaces, // this includes the LCL widgetset
+  cmem, // the c memory manager is on some systems much faster for multi-threading
+{$endif}
+  Interfaces, // this includes the LCL widget, // this includes the LCL widgetset
   Forms, ugui, uproxy, uglobal, uprocessos, unetwork, unistall, alterarhost,
   uppa, ulistinstall;
 
@@ -21,7 +21,7 @@ begin
   Application.CreateForm(TFInstall, FInstall);
   Application.CreateForm(TFAltHost, FAltHost);
   Application.CreateForm(TFramePPA, FramePPA);
-  Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TFprogress, Fprogress);
   Application.Run;
 end.
 

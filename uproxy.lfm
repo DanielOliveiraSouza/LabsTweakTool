@@ -1,10 +1,10 @@
 object FProxy: TFProxy
   Left = 398
-  Height = 431
-  Top = 175
+  Height = 428
+  Top = 178
   Width = 595
   Caption = 'Configurações de proxy'
-  ClientHeight = 431
+  ClientHeight = 428
   ClientWidth = 595
   OnClose = FormClose
   OnCreate = FormCreate

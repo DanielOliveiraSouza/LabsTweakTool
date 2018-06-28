@@ -4,7 +4,7 @@ program proxytweaktoll;
 
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
-  cthreads,
+  cthreads,cmem
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, ugui, uproxy, uglobal, uprocessos, unetwork, unistall, alterarhost,
@@ -20,8 +20,8 @@ begin
   Application.CreateForm(TFnetwork, Fnetwork);
   Application.CreateForm(TFInstall, FInstall);
   Application.CreateForm(TFAltHost, FAltHost);
-  Application.CreateForm(TForm6, Form6);
-  Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TFramePPA, FramePPA);
+  Application.CreateForm(TFprogress, Fprogress);
   Application.Run;
 end.
 

@@ -1,7 +1,7 @@
 object FAltHost: TFAltHost
   Left = 373
   Height = 231
-  Top = 242
+  Top = 243
   Width = 313
   Caption = 'Alterar o Hostname'
   ClientHeight = 231
