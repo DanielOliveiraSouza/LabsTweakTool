@@ -37,15 +37,16 @@ type
   type TFInstall = class(TForm)
     Button1: TButton;
     Button2: TButton;
-    CheckBox1: TCheckBox;
+    Label1: TLabel;
     Memo1: TMemo;
     RadioGroup1: TRadioGroup;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure CheckBox1Change(Sender: TObject);
+//    procedure CheckBox1Change(Sender: TObject);
    // procedure CheckBox1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
     procedure Memo1Change(Sender: TObject);
     procedure RadioGroup1Click(Sender: TObject);
   private
@@ -72,7 +73,7 @@ type
 var
   FInstall: TFInstall;
   //flag_run : boolean = false;
-  flag_stop: boolean = true;
+  flag_run: boolean = true;
   mthread :GUIThread;
 
  // FListInstall : Tform7;
@@ -114,56 +115,59 @@ end; }
          //procedimento para executar o processo em paralelo com  a GUI
 procedure GUIThread.Execute;
 var
-   i ,exitCode,exitStatus, ReadCount : integer;
-    debug : boolean;
-    CharBuffer: array [0..511] of char;
+  i ,exitCode,exitStatus, ReadCount : integer;
+  debug : boolean;
+  CharBuffer: array [0..511] of char;
 begin
-  i:=0;
-   //   inherited;
-    if ( flag_stop )  then;
-    begin
-
-
-  ref_proc.Executable := '/bin/bash';
-  ref_proc.Parameters.Add(uglobal.BRIDGE_ROOT); //caminho do script bridge
-  ref_proc.Parameters.Add('/bin/bash');
-  while (i < (args.Count) ) do begin
-    write(args[i] + ' ');
-    ref_proc.Parameters.Add(args[i]);
-    i := i  + 1;
-   end;
-  writeln('');
-   ref_proc.Options := ref_proc.Options + [ poUsePipes, poNoConsole];  // poNewConsole  é para terminais
-   ref_proc.Execute;         // Execute o comando
- exitCode:= ref_proc.ExitCode;
-   exitStatus:= ref_proc.ExitStatus;
-   while ( ref_proc.Running ) or (ref_proc.Output.NumBytesAvailable > 0)  do
-     begin
+i:=0;
+//   inherited;
+  if ( flag_run )  then;
+  begin
+      ref_proc.Executable := '/bin/bash';
+      ref_proc.Parameters.Add(uglobal.BRIDGE_ROOT); //caminho do script bridge
+      ref_proc.Parameters.Add('/bin/bash');
+      while (i < (args.Count) ) do begin
+        write(args[i] + ' ');
+        ref_proc.Parameters.Add(args[i]);
+        i := i  + 1;
+      end;
+      writeln('');
+      ref_proc.Options := ref_proc.Options + [ poUsePipes, poNoConsole];  // poNewConsole  é para terminais
+      ref_proc.Execute;         // Execute o comando
+      exitCode:= ref_proc.ExitCode;
+      exitStatus:= ref_proc.ExitStatus;
+      while ( ref_proc.Running ) or (ref_proc.Output.NumBytesAvailable > 0)  do
+      begin
         if  (ref_proc.Output.NumBytesAvailable > 0 ) then // while (ref_proc.Output.NumBytesAvailable > 0 ) do
-         begin
+        begin
           ReadCount := Min(512, ref_proc.Output.NumBytesAvailable); //Read up to buffer, not more
-              ref_proc.Output.Read(CharBuffer, ReadCount);
-              strTemp:= Copy(CharBuffer, 0, ReadCount);
-              //strTemp:= StrTemp.Replace(sLineBreak);
-              write(strTemp);
-              Sleep(2);
-              Self.Synchronize(@Self.Sincronize);  //aqui sincroniza o tmemo
-             // Memo1.Lines.Add(strTemp);
-              // progressbar1.Smooth:=true;
+          ref_proc.Output.Read(CharBuffer, ReadCount);
+          strTemp:= Copy(CharBuffer, 0, ReadCount);
+          //strTemp:= StrTemp.Replace(sLineBreak);
+          write(strTemp);
+          Sleep(2);
+          Self.Synchronize(@Self.Sincronize);  //aqui sincroniza o tmemo
+          // Memo1.Lines.Add(strTemp);
+          // progressbar1.Smooth:=true;
 
-         end
-     end;
-     if (ref_proc.Running = false ) then
-     begin
-     flag_stop:= false;
-     ref_proc.Free;
-    // StrTemp:='fim de execução';
-  // OnTerminate:=Self.Synchronize(@Self.Sincronize);
-  Sleep(5000);
-  exit;
-
+        end
+    end;
+    if (ref_proc.Running = false ) then
+    begin
+      ref_proc.Free;
+      // StrTemp:='fim de execução';
+      // OnTerminate:=Self.Synchronize(@Self.Sincronize);
+      StrTemp := '----------------------------------------------------' + sLineBreak +' ... ... ... ... ... Fim da execução ... ... ... ... ... ' + sLineBreak + '---------------------------------------------------';
+      Self.Synchronize(@Self.Sincronize);
+      //Sleep(1000);
+      //owMessage('Feito!');
+      Sleep(1000);
+       flag_run:= false ;
+       ref_outproc.Lines.Clear;
+      FInstall.Close;
+      exit;
     end
-     End;
+  End;
 end;
 
 
@@ -185,6 +189,7 @@ end;
 procedure GUIThread.SinFim();
 begin
   ref_outproc.Lines.Add('fim de execução');
+  Sleep(10);
 end;
 
 
@@ -243,25 +248,29 @@ begin
         /// Self.MeuProcesso.OnTerminate:= @ExecutarDepoisThead;
          MeuProcesso.FreeOnTerminate := True;
          Self.MeuProcesso.Start;
-         if ( flag_stop = false ) then
-           if ( self.frameAnterior <> nil ) then
+        //  Self.ExecutarDepoisThead(nil);
+         if ( flag_run = false ) then
+           {if ( self.frameAnterior <> nil ) then
              begin
-                Sleep(500);
-                ShowMessage('Terminou');
-                frameAnterior.Visible:=true;
-                self.close
+               // Sleep(500);
+                //Self.ExecutarDepoisThead();
+                //ShowMessage('Terminou');
+
+               { frameAnterior.Visible:=true;
+                flag_run :=true;
+                self.close}
          //Self.MeuProcesso.OnTerminate:= ExecutarDepoisThead;
          //if ( flag_run = false) then
              //Self.MeuProcesso.OnTerminate := MeuProcesso.syncronize();
              end;
-
+            }
 
         // Fprogress.setFrameAnterior(Self);
       //  self.procInstall := RunnableScripts.Create(Self.args);
         //mthread := GUIThread.Create(false,Self);
       // startThread(Self);
-      { if ( not flag_stop )  then exit;
-          flag_stop :=false;
+      { if ( not flag_run )  then exit;
+          flag_run :=false;
            with GUIThread.Create(false,Self) do
            FreeOnTerminate:=true;
 
@@ -337,21 +346,7 @@ begin
 //
 end;
 
-procedure TFInstall.CheckBox1Change(Sender: TObject);
-begin
- { if (Self.CheckBox1.Checked) then
-   begin
-     Memo1.Visible:= true;
-     //ProgressBar1.Visible:= false;
-   end
-   else
-   begin
-     Memo1.Visible:= false;
-     //ProgressBar1.Visible:= true;
-   end;
-   }
 
-end;
 
 
 procedure TFInstall.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -366,6 +361,11 @@ begin
   Self.framePosterior := Fprogress;
  // Self.ProgressBar1.Visible:=false;
  //:=false;
+end;
+
+procedure TFInstall.Label1Click(Sender: TObject);
+begin
+
 end;
 
 procedure TFInstall.Memo1Change(Sender: TObject);

@@ -41,7 +41,7 @@ object FInstall: TFInstall
     Height = 27
     Top = 216
     Width = 76
-    Caption = 'Cancelar'
+    Caption = 'Sair'
     OnClick = Button1Click
     TabOrder = 1
   end
@@ -50,14 +50,14 @@ object FInstall: TFInstall
     Height = 27
     Top = 216
     Width = 76
-    Caption = 'OK'
+    Caption = 'Executar'
     OnClick = Button2Click
     TabOrder = 2
   end
   object Memo1: TMemo
     Left = 0
-    Height = 97
-    Top = 275
+    Height = 100
+    Top = 272
     Width = 355
     Align = alBottom
     Color = clBtnText
@@ -65,12 +65,13 @@ object FInstall: TFInstall
     ParentFont = False
     TabOrder = 3
   end
-  object CheckBox1: TCheckBox
+  object Label1: TLabel
     Left = 56
-    Height = 32
-    Top = 184
-    Width = 32
-    OnChange = CheckBox1Change
-    TabOrder = 4
+    Height = 14
+    Top = 256
+    Width = 101
+    Caption = 'Saída do terminal:'
+    ParentColor = False
+    OnClick = Label1Click
   end
 end
