@@ -74,7 +74,7 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="245"/>
+        <TopLine Value="259"/>
         <CursorPos X="64" Y="257"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -100,7 +100,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="37"/>
         <CursorPos X="81" Y="60"/>
-        <UsageCount Value="160"/>
+        <UsageCount Value="161"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit8>
@@ -113,14 +113,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="68"/>
         <CursorPos X="42" Y="56"/>
-        <UsageCount Value="100"/>
+        <UsageCount Value="101"/>
       </Unit9>
       <Unit10>
         <Filename Value="uthread.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="23" Y="12"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="53"/>
       </Unit10>
       <Unit11>
         <Filename Value="../../../../lazarus/lcl/include/customform.inc"/>

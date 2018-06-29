@@ -123,7 +123,7 @@ var
 begin
 i:=0;
 //   inherited;
-  if ( flag_stop )  then;
+  if ( flag_stop )  then;         //a thread cria um processo em grava o output em uma string
   begin
       ref_proc.Executable := '/bin/bash';
       ref_proc.Parameters.Add(uglobal.BRIDGE_ROOT); //caminho do script bridge
@@ -148,24 +148,26 @@ i:=0;
           //strTemp:= StrTemp.Replace(sLineBreak);
           write(strTemp);
           Sleep(2);
-          Self.Synchronize(@Self.Sincronize);  //aqui sincroniza o tmemo
+          Self.Synchronize(@Self.Sincronize);  // sincroniza com a thread principal o estado de memo
           // Memo1.Lines.Add(strTemp);
           // progressbar1.Smooth:=true;
 
         end
     end;
-    if (ref_proc.Running = false ) then
+    if (ref_proc.Running = false ) then        //verifica se o processo acabou
+    {e inicia os procedimentos para encerrar  a thread }
     begin
-      ref_proc.Free;
+      ref_proc.Free; //
       // StrTemp:='fim de execução';
       // OnTerminate:=Self.Synchronize(@Self.Sincronize);
       StrTemp := '----------------------------------------------------' + sLineBreak +' ... ... ... ... ... Fim da execução ... ... ... ... ... ' + sLineBreak + '---------------------------------------------------';
-      Self.Synchronize(@Self.SinFim);
+      Self.Synchronize(@Self.SinFim);                 //sincroniza  a msg de fim de execução com a thread principal
       //Sleep(1000);
       //owMessage('Feito!');
-      Sleep(1000);
+
        flag_stop:= false ;
-       Self.Synchronize(@ref_outproc.Lines.Clear);
+       Self.Synchronize(@ref_outproc.Lines.Clear);  //sincroniza a limpeza do tmemo
+        Sleep(1000);     //dorme 1 segundo para o usuário perceber que o progressbar1 parou
       FInstall.Close;
       exit;
     end
@@ -184,7 +186,10 @@ begin
   self.ref_progressbar:= loadbar;
   ref_proc := TProcess.create(nil);
 end;
-
+  {
+  Procedimento da thread sincronizada com thread principal para  atualizar o tipo de progress bar
+  e atualizar o tmemo
+  }
 procedure GUIThread.Sincronize();
 begin
    if ( self.ref_progressbar.Visible = false ) then
@@ -194,13 +199,15 @@ begin
 
    Self.ref_outproc.Lines.Add(self.StrTemp);
 end;
-
+{
+Essa função faz a sincronização final, escreve a última linha no tmemo e muda o tipo de progress bar
+}
 procedure GUIThread.SinFim();
 begin
   ref_outproc.Lines.Add(StrTemp);
   if ( self.ref_progressbar.Style = pbstMarquee ) then
          self.ref_progressbar.Style := pbstNormal;
-  Sleep(10);
+  Sleep(1000);
 end;
 
 

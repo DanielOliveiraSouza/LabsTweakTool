@@ -77,7 +77,7 @@ object FInstall: TFInstall
   object ProgressBar1: TProgressBar
     Left = 56
     Height = 20
-    Top = 224
+    Top = 208
     Width = 253
     TabOrder = 4
   end
