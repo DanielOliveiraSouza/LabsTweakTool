@@ -22,11 +22,12 @@ type
 //    proc : RunnableScripts;
 
       ref_outproc : Tmemo;
+      ref_progressbar : TProgressBar;
       ref_proc: TProcess;
       args: TStringList;
       StrTemp:string;
     public
-      Constructor Create(mymemo : tmemo;  cargs :TStringList); reintroduce;
+      Constructor Create(mymemo : tmemo;  cargs :TStringList;loadbar:TProgressBar); reintroduce;
       procedure Sincronize();
       procedure SinFim();
       procedure Execute; override;
@@ -39,6 +40,7 @@ type
     Button2: TButton;
     Label1: TLabel;
     Memo1: TMemo;
+    ProgressBar1: TProgressBar;
     RadioGroup1: TRadioGroup;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -72,8 +74,8 @@ type
 
 var
   FInstall: TFInstall;
-  //flag_run : boolean = false;
-  flag_run: boolean = true;
+  //flag_stop : boolean = false;
+  flag_stop: boolean = true;
   mthread :GUIThread;
 
  // FListInstall : Tform7;
@@ -121,7 +123,7 @@ var
 begin
 i:=0;
 //   inherited;
-  if ( flag_run )  then;
+  if ( flag_stop )  then;
   begin
       ref_proc.Executable := '/bin/bash';
       ref_proc.Parameters.Add(uglobal.BRIDGE_ROOT); //caminho do script bridge
@@ -158,12 +160,12 @@ i:=0;
       // StrTemp:='fim de execução';
       // OnTerminate:=Self.Synchronize(@Self.Sincronize);
       StrTemp := '----------------------------------------------------' + sLineBreak +' ... ... ... ... ... Fim da execução ... ... ... ... ... ' + sLineBreak + '---------------------------------------------------';
-      Self.Synchronize(@Self.Sincronize);
+      Self.Synchronize(@Self.SinFim);
       //Sleep(1000);
       //owMessage('Feito!');
-      Sleep(100);
-       flag_run:= false ;
-       ref_outproc.Lines.Clear;
+      Sleep(1000);
+       flag_stop:= false ;
+       Self.Synchronize(@ref_outproc.Lines.Clear);
       FInstall.Close;
       exit;
     end
@@ -171,24 +173,33 @@ i:=0;
 end;
 
 
-constructor GUIThread.Create(mymemo: tmemo; cargs: TStringList);
+constructor GUIThread.Create(mymemo: tmemo; cargs: TStringList;
+  loadbar: TProgressBar);
 begin
   inherited Create(True);
   Self.FreeOnTerminate := True;
   self.ref_outproc := mymemo;
   self.args :=cargs;
   self.StrTemp:='';
+  self.ref_progressbar:= loadbar;
   ref_proc := TProcess.create(nil);
 end;
 
 procedure GUIThread.Sincronize();
 begin
+   if ( self.ref_progressbar.Visible = false ) then
+     self.ref_progressbar.Visible:= true;
+     if ( self.ref_progressbar.Style = pbstNormal ) then
+         self.ref_progressbar.Style := pbstMarquee;
+
    Self.ref_outproc.Lines.Add(self.StrTemp);
 end;
 
 procedure GUIThread.SinFim();
 begin
-  ref_outproc.Lines.Add('fim de execução');
+  ref_outproc.Lines.Add(StrTemp);
+  if ( self.ref_progressbar.Style = pbstMarquee ) then
+         self.ref_progressbar.Style := pbstNormal;
   Sleep(10);
 end;
 
@@ -243,13 +254,13 @@ begin
          self.args := TStringList.Create();
           Self.args.Add(uglobal.PST_HOME + '/main-pst.sh');
          insertArgs(RadioGroup1.ItemIndex);
-         MeuProcesso:= GUIThread.Create(memo1,args);
+         MeuProcesso:= GUIThread.Create(memo1,args,ProgressBar1);
 
         /// Self.MeuProcesso.OnTerminate:= @ExecutarDepoisThead;
          MeuProcesso.FreeOnTerminate := True;
          Self.MeuProcesso.Start;
         //  Self.ExecutarDepoisThead(nil);
-         if ( flag_run = false ) then
+         if ( flag_stop = false ) then
            {if ( self.frameAnterior <> nil ) then
              begin
                // Sleep(500);
@@ -257,10 +268,10 @@ begin
                 //ShowMessage('Terminou');
 
                { frameAnterior.Visible:=true;
-                flag_run :=true;
+                flag_stop :=true;
                 self.close}
          //Self.MeuProcesso.OnTerminate:= ExecutarDepoisThead;
-         //if ( flag_run = false) then
+         //if ( flag_stop = false) then
              //Self.MeuProcesso.OnTerminate := MeuProcesso.syncronize();
              end;
             }
@@ -269,8 +280,8 @@ begin
       //  self.procInstall := RunnableScripts.Create(Self.args);
         //mthread := GUIThread.Create(false,Self);
       // startThread(Self);
-      { if ( not flag_run )  then exit;
-          flag_run :=false;
+      { if ( not flag_stop )  then exit;
+          flag_stop :=false;
            with GUIThread.Create(false,Self) do
            FreeOnTerminate:=true;
 

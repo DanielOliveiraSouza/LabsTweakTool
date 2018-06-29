@@ -1,10 +1,10 @@
 object FInstall: TFInstall
   Left = 732
-  Height = 372
+  Height = 421
   Top = 207
   Width = 355
   Caption = 'Guia de Instalação'
-  ClientHeight = 372
+  ClientHeight = 421
   ClientWidth = 355
   OnClose = FormClose
   OnCreate = FormCreate
@@ -39,7 +39,7 @@ object FInstall: TFInstall
   object Button1: TButton
     Left = 56
     Height = 27
-    Top = 216
+    Top = 256
     Width = 76
     Caption = 'Sair'
     OnClick = Button1Click
@@ -48,7 +48,7 @@ object FInstall: TFInstall
   object Button2: TButton
     Left = 233
     Height = 27
-    Top = 216
+    Top = 256
     Width = 76
     Caption = 'Executar'
     OnClick = Button2Click
@@ -57,7 +57,7 @@ object FInstall: TFInstall
   object Memo1: TMemo
     Left = 0
     Height = 100
-    Top = 272
+    Top = 321
     Width = 355
     Align = alBottom
     Color = clBtnText
@@ -66,12 +66,19 @@ object FInstall: TFInstall
     TabOrder = 3
   end
   object Label1: TLabel
-    Left = 56
+    Left = 0
     Height = 14
-    Top = 256
+    Top = 304
     Width = 101
     Caption = 'Saída do terminal:'
     ParentColor = False
     OnClick = Label1Click
+  end
+  object ProgressBar1: TProgressBar
+    Left = 56
+    Height = 20
+    Top = 224
+    Width = 253
+    TabOrder = 4
   end
 end
