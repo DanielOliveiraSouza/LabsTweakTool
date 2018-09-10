@@ -154,19 +154,20 @@ i:=0;
 
         end
     end;
-    if (ref_proc.Running = false ) then
+    if (ref_proc.Running = false ) then        //verifica se o processo acabou
+    {e inicia os procedimentos para encerrar  a thread }
     begin
-      ref_proc.Free;
+      ref_proc.Free; //
       // StrTemp:='fim de execução';
       // OnTerminate:=Self.Synchronize(@Self.Sincronize);
       StrTemp := '----------------------------------------------------' + sLineBreak +' ... ... ... ... ... Fim da execução ... ... ... ... ... ' + sLineBreak + '---------------------------------------------------';
-      Self.Synchronize(@Self.SinFim);
+      Self.Synchronize(@Self.SinFim);                 //sincroniza  a msg de fim de execução com a thread principal
       //Sleep(1000);
       //owMessage('Feito!');
 
        flag_stop:= false ;
-       Self.Synchronize(@ref_outproc.Lines.Clear);
-        Sleep(1000);
+       Self.Synchronize(@ref_outproc.Lines.Clear);  //sincroniza a limpeza do tmemo
+        Sleep(1000);     //dorme 1 segundo para o usuário perceber que o progressbar1 parou
       FInstall.Close;
       exit;
     end
@@ -198,7 +199,9 @@ begin
 
    Self.ref_outproc.Lines.Add(self.StrTemp);
 end;
-
+{
+Essa função faz a sincronização final, escreve a última linha no tmemo e muda o tipo de progress bar
+}
 procedure GUIThread.SinFim();
 begin
   ref_outproc.Lines.Add(StrTemp);
@@ -224,7 +227,9 @@ procedure TFInstall.insertArgs(type_str : integer);
 begin
   writeln(Self.str_args);
   if ( type_str =  4 ) then
+      // aux := TStringList.Create;
        Self.args.AddStrings(Self.str_args.Split(' '))
+
        else
          Self.args.Add(str_args);
 end;

@@ -67,7 +67,7 @@ object FInstall: TFInstall
   end
   object Label1: TLabel
     Left = 0
-    Height = 14
+    Height = 17
     Top = 304
     Width = 101
     Caption = 'Saída do terminal:'

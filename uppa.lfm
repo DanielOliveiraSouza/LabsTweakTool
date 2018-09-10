@@ -1,7 +1,7 @@
 object FramePPA: TFramePPA
-  Left = 7
+  Left = 17
   Height = 240
-  Top = 0
+  Top = 75
   Width = 319
   Caption = 'Adicionar PPA'
   ClientHeight = 240
@@ -50,7 +50,7 @@ object FramePPA: TFramePPA
   end
   object Label2: TLabel
     Left = 46
-    Height = 14
+    Height = 17
     Top = 88
     Width = 71
     Caption = 'Digite o PPA:'
