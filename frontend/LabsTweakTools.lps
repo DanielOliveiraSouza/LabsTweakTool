@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="26">
+    <Units Count="33">
       <Unit0>
         <Filename Value="LabsTweakTools.pas"/>
         <IsPartOfProject Value="True"/>
@@ -14,7 +14,6 @@
       </Unit0>
       <Unit1>
         <Filename Value="units/ulistinstall.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="Fprogress"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -26,7 +25,6 @@
       </Unit1>
       <Unit2>
         <Filename Value="units/uppa.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FramePPA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -38,7 +36,6 @@
       </Unit2>
       <Unit3>
         <Filename Value="units/alterarhost.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FAltHost"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -59,30 +56,26 @@
       </Unit4>
       <Unit5>
         <Filename Value="units/unistall.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FInstall"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="73"/>
         <CursorPos Y="90"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="units/uglobal.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="15"/>
-        <CursorPos X="65" Y="35"/>
+        <CursorPos X="38" Y="32"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="units/unetwork.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="Fnetwork"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -94,7 +87,6 @@
       </Unit7>
       <Unit8>
         <Filename Value="units/uproxy.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FProxy"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -106,7 +98,6 @@
       </Unit8>
       <Unit9>
         <Filename Value="units/ugui.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -237,11 +228,94 @@
       </Unit24>
       <Unit25>
         <Filename Value="units/unistall.lfm"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit25>
+      <Unit26>
+        <Filename Value="units/gui/uppa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FramePPA"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="units/gui/ulistinstall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fprogress"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="units/gui/alterarhost.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FAltHost"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="units/gui/unistall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FInstall"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="units/gui/unetwork.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fnetwork"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="units/gui/uproxy.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProxy"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="units/gui/ugui.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit32>
     </Units>
     <JumpHistory Count="2" HistoryIndex="1">
       <Position1>

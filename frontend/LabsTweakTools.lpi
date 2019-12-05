@@ -39,57 +39,57 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="units/ulistinstall.pas"/>
+        <Filename Value="units/uprocessos.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Fprogress"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
-        <Filename Value="units/uppa.pas"/>
+        <Filename Value="units/uglobal.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="units/gui/uppa.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FramePPA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="units/alterarhost.pas"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="units/gui/ulistinstall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fprogress"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="units/gui/alterarhost.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FAltHost"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="units/uprocessos.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="units/unistall.pas"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="units/gui/unistall.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FInstall"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="units/uglobal.pas"/>
-        <IsPartOfProject Value="True"/>
       </Unit6>
       <Unit7>
-        <Filename Value="units/unetwork.pas"/>
+        <Filename Value="units/gui/unetwork.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Fnetwork"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit7>
       <Unit8>
-        <Filename Value="units/uproxy.pas"/>
+        <Filename Value="units/gui/uproxy.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FProxy"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit8>
       <Unit9>
-        <Filename Value="units/ugui.pas"/>
+        <Filename Value="units/gui/ugui.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FMain"/>
         <HasResources Value="True"/>
@@ -105,7 +105,7 @@
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
       <Libraries Value="-dUseCThreads"/>
-      <OtherUnitFiles Value="units"/>
+      <OtherUnitFiles Value="units;units/gui"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
