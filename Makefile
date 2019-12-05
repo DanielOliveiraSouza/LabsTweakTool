@@ -3,7 +3,7 @@ all:
 
 clean:
 	if test -d lib ; then rm  -rf lib ;  fi
-	if test -d LabsTweakTools  ; 	then rm LabsTweakTools  ;  fi
+	if test -f LabsTweakTools  ; 	then rm LabsTweakTools  ;  fi
 
 
 
