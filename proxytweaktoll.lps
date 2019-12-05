@@ -1,89 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="16">
+    <Units Count="26">
       <Unit0>
         <Filename Value="proxytweaktoll.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="2"/>
-        <CursorPos X="29" Y="16"/>
+        <TopLine Value="4"/>
+        <CursorPos X="94" Y="26"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="ugui.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="10"/>
         <UsageCount Value="224"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="uproxy.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FProxy"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="341"/>
         <CursorPos Y="371"/>
         <UsageCount Value="224"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="uglobal.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="42" Y="46"/>
         <UsageCount Value="212"/>
-        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="uprocessos.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="32" Y="9"/>
         <UsageCount Value="209"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="icons/unetwork.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="Fnetwork"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="34"/>
         <CursorPos X="56" Y="100"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="unistall.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FInstall"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="404"/>
         <CursorPos X="7" Y="428"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="alterarhost.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FAltHost"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -94,43 +76,38 @@
       </Unit7>
       <Unit8>
         <Filename Value="uppa.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FramePPA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="81" Y="60"/>
         <UsageCount Value="161"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="ulistinstall.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="Fprogress"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="68"/>
+        <TopLine Value="67"/>
         <CursorPos X="42" Y="56"/>
         <UsageCount Value="101"/>
       </Unit9>
       <Unit10>
         <Filename Value="uthread.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="23" Y="12"/>
         <UsageCount Value="53"/>
       </Unit10>
       <Unit11>
-        <Filename Value="../../../../lazarus/lcl/include/customform.inc"/>
+        <Filename Value="/lazarus/lcl/include/customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2780"/>
         <CursorPos Y="2931"/>
         <UsageCount Value="1"/>
       </Unit11>
       <Unit12>
-        <Filename Value="../../../../lazarus/components/lazutils/dynqueue.pas"/>
+        <Filename Value="/lazarus/components/lazutils/dynqueue.pas"/>
         <UnitName Value="DynQueue"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="445"/>
@@ -152,134 +129,141 @@
       </Unit14>
       <Unit15>
         <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/objpas/classes/classesh.inc"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="652"/>
         <CursorPos X="25" Y="663"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit15>
+      <Unit16>
+        <Filename Value="units/ulistinstall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fprogress"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="units/uppa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FramePPA"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="units/alterarhost.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FAltHost"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="units/uprocessos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="units/unistall.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FInstall"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="414"/>
+        <CursorPos X="31" Y="13"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="units/uglobal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="15"/>
+        <CursorPos X="65" Y="35"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="units/unetwork.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fnetwork"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="units/uproxy.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProxy"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="units/ugui.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="units/unistall.lfm"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit25>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="4" HistoryIndex="3">
       <Position1>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="44" Column="3" TopLine="31"/>
+        <Filename Value="proxytweaktoll.pas"/>
+        <Caret Line="16" Column="29" TopLine="2"/>
       </Position1>
       <Position2>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="45" Column="3" TopLine="31"/>
+        <Filename Value="proxytweaktoll.pas"/>
+        <Caret Line="10" Column="10" TopLine="4"/>
       </Position2>
       <Position3>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="365" Column="3" TopLine="360"/>
+        <Filename Value="units/uglobal.pas"/>
+        <Caret Line="36" Column="35" TopLine="22"/>
       </Position3>
       <Position4>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="124" Column="18" TopLine="111"/>
+        <Filename Value="units/uglobal.pas"/>
+        <Caret Line="27" Column="26" TopLine="15"/>
       </Position4>
-      <Position5>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="159" Column="6" TopLine="146"/>
-      </Position5>
-      <Position6>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="161" Column="18" TopLine="149"/>
-      </Position6>
-      <Position7>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="254" Column="32" TopLine="239"/>
-      </Position7>
-      <Position8>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="161" Column="113" TopLine="154"/>
-      </Position8>
-      <Position9>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="164" Column="24" TopLine="153"/>
-      </Position9>
-      <Position10>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="165" Column="24" TopLine="153"/>
-      </Position10>
-      <Position11>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="181" Column="29" TopLine="163"/>
-      </Position11>
-      <Position12>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="28" Column="27" TopLine="13"/>
-      </Position12>
-      <Position13>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="27" Column="22" TopLine="27"/>
-      </Position13>
-      <Position14>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="273" Column="20" TopLine="246"/>
-      </Position14>
-      <Position15>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="360" Column="3" TopLine="358"/>
-      </Position15>
-      <Position16>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="30" Column="62" TopLine="9"/>
-      </Position16>
-      <Position17>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="163" Column="6" TopLine="142"/>
-      </Position17>
-      <Position18>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="190" Column="47" TopLine="178"/>
-      </Position18>
-      <Position19>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="203" Column="13" TopLine="190"/>
-      </Position19>
-      <Position20>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="202" Column="51" TopLine="190"/>
-      </Position20>
-      <Position21>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="171" Column="4" TopLine="161"/>
-      </Position21>
-      <Position22>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="80" Column="11" TopLine="69"/>
-      </Position22>
-      <Position23>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="79" Column="22" TopLine="69"/>
-      </Position23>
-      <Position24>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="174" Column="69" TopLine="115"/>
-      </Position24>
-      <Position25>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="232" Column="34" TopLine="214"/>
-      </Position25>
-      <Position26>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="230" Column="9" TopLine="221"/>
-      </Position26>
-      <Position27>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="231" Column="17" TopLine="219"/>
-      </Position27>
-      <Position28>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="55" Column="12" TopLine="44"/>
-      </Position28>
-      <Position29>
-        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/objpas/classes/classesh.inc"/>
-        <Caret Line="726" Column="3" TopLine="738"/>
-      </Position29>
-      <Position30>
-        <Filename Value="unistall.pas"/>
-        <Caret Line="9" Column="87"/>
-      </Position30>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>

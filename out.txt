@@ -1,9 +1,0 @@
-Welcome to Bridge Root , exec: /bin/bash /home/danny/scripts/pst/ver-2.0-rc10/main-pst.sh --ativa_proxy
-
-Aviso: variável PST_HOME não está definida:
-Certifique que em  /root contenha os módulos do PST ...
-
-seu linux é: Debian GNU/Linux 9
-Ativando proxy  para : root
-write proxy with svn
-write git config 
