@@ -4,8 +4,8 @@ Labs Tweak tool
 O que a ferramenta faz?
 -----------------
 <p>
-	Labs Tweak tool  é um frontend gráfico para o <em><a href="https://github.com/DanielOliveiraSouza/ufmt-cua-lab-tools">UFMT-CUA-Tools</a></em>
-	Esta ferramenta permite a instalação, configuração de diversas ferramentas ( bibliotecas, compiladores, IDE'S, editores de texto, depuradores, entre outras) usadas ao longo do Curso de Ciência de computação  de maneira intuitiva.
+	Labs Tweak tool  é um frontend gráfico para o <em><a href="https://github.com/DanielOliveiraSouza/ufmt-cua-lab-tools">UFMT-CUA-Tools</a></em>.
+	Esta ferramenta permite a instalação, configuração de diversas bibliotecas, compiladores, IDE'S, editores de texto, depuradores  usadas ao longo do Curso de Ciência de computação de maneira intuitiva.
 </p>
 
 
@@ -16,10 +16,11 @@ Distribuições  Oficialmente Suportadas
 	<li>Debian/GNU Linux 9</li>
 	<li>Ubuntu 18.04 LTS</li>
 	<li>Ubuntu 16.04 LTS</li>
-	<li>Linux Mint 19 <strong>Cinnamon</strong></li>
+	<li>Linux Mint 18.3</li>
+	<li>Linux Mint 19</li>
 </ul>	
 
-Ferramentas mais usadas por programadores</li>
+Principais ferramentas instaladas:
 ---
 
 <ul>
