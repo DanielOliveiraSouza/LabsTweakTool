@@ -9,7 +9,7 @@ object FInstall: TFInstall
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.8.2.0'
+  LCLVersion = '2.0.4.0'
   object RadioGroup1: TRadioGroup
     Left = 56
     Height = 156
@@ -25,7 +25,7 @@ object FInstall: TFInstall
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 138
-    ClientWidth = 251
+    ClientWidth = 245
     Items.Strings = (
       'Atualizar e Instalar '
       'Apenas Instalar'
@@ -67,9 +67,9 @@ object FInstall: TFInstall
   end
   object Label1: TLabel
     Left = 0
-    Height = 17
+    Height = 15
     Top = 304
-    Width = 101
+    Width = 111
     Caption = 'Saída do terminal:'
     ParentColor = False
     OnClick = Label1Click

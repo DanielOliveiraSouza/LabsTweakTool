@@ -88,6 +88,34 @@ implementation
 
 {$R *.lfm}
 
+{ GUIThread }
+
+{procedure GUIThread.Execute;
+begin
+  while not Terminated do
+  begin
+       if (guiform.framePosterior.visible = false ) then
+            guiform.framePosterior.Visible:=true;
+      {  if (Self.guiform.ProgressBar1.Visible = false ) then begin
+             self.guiform.ProgressBar1.Visible:= true;
+             Self.guiform.updateProgressBar();
+             //Synchronize(self.guiform.);
+        end;
+             sleep(120);
+                  writeln('mythread: I am running!');
+//                  Synchronize(@Self.guiform.Button2Click);
+       }
+       {if ( flag_stop = true ) then  begin
+            // writeln('mythread: I am die');
+            Self.guiform.Visible:=true;
+            Self.guiform.framePosterior.Visible:=false;
+             exit;
+        end;
+        }
+
+
+  end;
+end; }
 //procedimento para executar o processo em paralelo com  a GUI
 procedure GUIThread.Execute;
 var
