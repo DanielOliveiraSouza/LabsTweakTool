@@ -1,1 +1,0 @@
-Welcome to Bridge Root , exec: /bin/bash /tmp/install-java.sh
