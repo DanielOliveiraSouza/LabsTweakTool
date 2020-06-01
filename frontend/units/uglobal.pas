@@ -1,6 +1,6 @@
 unit uglobal;
 {
-		 Este módulo contém flags que parametrizam a interface gráfica com o script main-pst.sh
+	Este módulo contém flags que parametrizam a interface gráfica com o script main-pst.sh
 
 }
 
@@ -17,7 +17,7 @@ var
 	flag_root : boolean = false;									//flag de super usuário on /off
 	flag_auth_proxy: boolean = false;
 	//flag de proxy autenticado
- { flag_set_host: boolean = false;							 //flag que avisa que o campo de host(proxy) foi preenchido
+	{ flag_set_host: boolean = false;							 //flag que avisa que o campo de host(proxy) foi preenchido
 	flag_set_porta: boolean = false;							//flag que avisa que o campo de porta(proxy) foi preenchido
 	flag_set_user_proxy : boolean = false;			 // flag que avisa que o campo de	usuário(proxy autenticado) foi preenchido
 	flag_set_psw_proxy : boolean = false;				// flag que avisa que o campo de senha(proxy autenticado) foi preenchido
@@ -44,9 +44,6 @@ var
 	ERROR_DIST_NOT_SUPPORTED : integer = 253;
 	PST_STR_INIT_LOG : string = 'Running PST main module, erros = 0';
 	PST_LOG_FILE : string = '/tmp/pst.log';
-
-
-
 
 
 implementation

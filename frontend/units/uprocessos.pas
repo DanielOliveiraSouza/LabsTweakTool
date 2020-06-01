@@ -51,29 +51,29 @@ implementation
 
 			hprocess := TProcess.Create(nil);
 			hprocess.Executable := '/bin/bash';
-			if ( self.args <> nil ) then begin
-				while (i < (args.Count) ) do
-				begin
+			if ( self.args <> nil ) then
+			begin
+				while (i < (args.Count) ) do begin
 					write(args[i] + ' ');
 					hprocess.Parameters.Add(args[i]);
 					i := i  + 1;
 				end;
-					writeln('');
-			// writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
-					hprocess.Options:= hprocess.Options + [poWaitOnExit,poUsePipes,poNoConsole];
-					// hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  // poNewConsole  é para terminais
-					hprocess.Execute;         // Execute o comando
-					Self.exitCode:= hprocess.ExitCode;
-					Self.exitStatus:= hprocess.ExitStatus;
-					//Self.strError := TStringList.Create;
-					Self.strError.LoadFromStream(hprocess.Stderr);
-					Self.strError.SaveToFile('err.txt');
-					Self.strOut := TStringList.Create;
-					Self.strOut.LoadFromStream(hprocess.Output);
-					Self.strOut.SaveToFile('out.txt');
-					//  writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
-					 //Sleep(2000);
-				end else
+				writeln('');
+				// writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
+				hprocess.Options:= hprocess.Options + [poWaitOnExit,poUsePipes,poNoConsole];
+				// hprocess.Options := hProcess.Options + [poWaitOnExit, poUsePipes, poNewConsole];  // poNewConsole  é para terminais
+				hprocess.Execute;         // Execute o comando
+				Self.exitCode:= hprocess.ExitCode;
+				Self.exitStatus:= hprocess.ExitStatus;
+				//Self.strError := TStringList.Create;
+				Self.strError.LoadFromStream(hprocess.Stderr);
+				Self.strError.SaveToFile('err.txt');
+				Self.strOut := TStringList.Create;
+				Self.strOut.LoadFromStream(hprocess.Output);
+				Self.strOut.SaveToFile('out.txt');
+				//  writeln('Exit CODE = ',hprocess.ExitCode,'EXIT_STATUS = ',hprocess.ExitStatus);
+				 //Sleep(2000);
+			end else
 			Writeln('args is null');
 		finally
 				hprocess.Free;
@@ -124,7 +124,7 @@ implementation
 			hprocess.Executable := 'pkexec'; //pkexec é o processo com super poderes
 			hprocess.Parameters.Add('/bin/bash');
 
-			if ( Self.args <> nil )  then
+			if ( Self.args <> nil )then
 			begin  //verifica se args não é nulo
 				while (i < (Self.args.Count) ) do 
 				begin
