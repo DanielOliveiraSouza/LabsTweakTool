@@ -59,3 +59,5 @@ __history/
 
 frontend/out.txt
 frontend/err.txt
+frontend/lib
+frontend/LabsTweakTools
