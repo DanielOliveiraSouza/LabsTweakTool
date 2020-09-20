@@ -3,12 +3,12 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="33">
+    <Units Count="34">
       <Unit0>
         <Filename Value="LabsTweakTools.pas"/>
         <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="224"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="units/uprocessos.pas"/>
@@ -22,10 +22,12 @@
       <Unit2>
         <Filename Value="units/uglobal.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="19"/>
-        <CursorPos X="38" Y="32"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="22"/>
+        <CursorPos X="83" Y="27"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="units/gui/uppa.pas"/>
@@ -33,12 +35,9 @@
         <ComponentName Value="FramePPA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="6"/>
-        <CursorPos X="45" Y="2"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="107" Y="3"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="units/gui/ulistinstall.pas"/>
@@ -46,9 +45,9 @@
         <ComponentName Value="Fprogress"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="79"/>
-        <CursorPos X="39" Y="81"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="64"/>
+        <CursorPos X="19" Y="69"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -59,7 +58,7 @@
         <ComponentName Value="FAltHost"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit5>
@@ -70,6 +69,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="5"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="382"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -80,8 +81,8 @@
         <ComponentName Value="Fnetwork"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
-        <CursorPos X="73" Y="8"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="90" Y="4"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -92,10 +93,8 @@
         <ComponentName Value="FProxy"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="units/gui/ugui.pas"/>
@@ -103,9 +102,8 @@
         <ComponentName Value="FMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="11"/>
-        <CursorPos X="31" Y="16"/>
+        <TopLine Value="85"/>
+        <CursorPos X="3" Y="97"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -311,8 +309,31 @@
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit32>
+      <Unit33>
+        <Filename Value="units/gui/unistall.lfm"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit33>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="4" HistoryIndex="3">
+      <Position1>
+        <Filename Value="units/uglobal.pas"/>
+        <Caret Line="27" Column="42" TopLine="15"/>
+      </Position1>
+      <Position2>
+        <Filename Value="units/gui/ugui.pas"/>
+        <Caret Line="16" Column="31" TopLine="196"/>
+      </Position2>
+      <Position3>
+        <Filename Value="units/gui/ugui.pas"/>
+        <Caret Line="87" Column="3" TopLine="85"/>
+      </Position3>
+      <Position4>
+        <Filename Value="units/gui/unistall.pas"/>
+      </Position4>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes Count="0" ActiveMode="default"/>

@@ -22,10 +22,10 @@ var
 	flag_set_user_proxy : boolean = false;			 // flag que avisa que o campo de	usuário(proxy autenticado) foi preenchido
 	flag_set_psw_proxy : boolean = false;				// flag que avisa que o campo de senha(proxy autenticado) foi preenchido
 	}
-	PST_HOME : string = '/home/danny/Dev/pst/ufmt-cua-lab-tools';									 // campo que contém o caminho dos módulos PST ( a ser implementado em futuro próximo)
+	PST_HOME : string = '/home/danny/Dev/LabsTweakTool/pst/ufmt-cua-lab-tools';	// campo que contém o caminho dos módulos PST ( a ser implementado em futuro próximo)
 //	uglobal.PST_HOME + '/main-pst.sh' : string	= '';
-	BRIDGE_ROOT: string = '/home/danny/Dev/pst/ufmt-cua-lab-tools/bridge-root.sh';
-	VERSION : string ='PST 2.0-rc10-r05-01-2018' + sLineBreak + 'PST Tweak Tools by DanielTimelord'+ sLineBreak +	sLineBreak+'(c) 2014-2018' + sLineBreak + 'PST é um conjunto de ferramentas que	automatizam tarefas em laboratorios';
+	BRIDGE_ROOT: string ='/home/danny/Dev/LabsTweakTool/pst/ufmt-cua-lab-tools/bridge-root.sh';
+	VERSION : string ='PST 2.0-rc10-31-05-2020' + sLineBreak + 'PST Tweak Tools by DanielTimelord'+ sLineBreak +	sLineBreak+'(c) 2014-2018' + sLineBreak + 'PST é um conjunto de ferramentas que	automatizam tarefas em laboratorios';
 	flag_proxy_form_valid : boolean	= false;
 	erro_proxy_form : integer = -1;
 	{ convenção erro_proxy_form
