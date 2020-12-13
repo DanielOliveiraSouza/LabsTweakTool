@@ -52,8 +52,7 @@ Screenshots
 
 <p float="left" align="middle">
 	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_09_tela_principal.png" width="40%" height="40%" />
-	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_12_softwares_redes.png" width="40%" height="40%">
-	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_10_tela_proxy.png" width="40%" height="40%">
+	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_12_softwares_redes.png" width="36%" height="36%">
+	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_10_tela_proxy.png" width="36%" height="36%">
 	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_11_configuracao_proxy.png" width="40%" height="40%">
-	<img src="https://raw.githubusercontent.com/DanielOliveiraSouza/LabsTweakTool/master/screenshots/captura_13_tela_autenticacao.png" width="40%" height="40%">
 </p>
