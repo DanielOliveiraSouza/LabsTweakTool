@@ -4,7 +4,7 @@
 </p>
 
 <p align=center>
-  <a href="https://github.com/DanielOliveiraSouza/LabsTweakTool/archive/v0.1.0.zip"><img src="https://img.shields.io/badge/Release-v0.1.0-green"/> </a><img src="https://img.shields.io/badge/language-java-blue"/> <a href="https://github.com/DanielOliveiraSouza/LabsTweakTool/LICENSE.md"><img src="https://img.shields.io/github/license/danieloliveirasouza/LabsTweakTool"/></a>
+  <a href="https://github.com/DanielOliveiraSouza/LabsTweakTool/archive/v0.1.0.zip"><img src="https://img.shields.io/badge/Release-v0.1.0-green"/> </a><img src="https://img.shields.io/badge/language-pascal-blue"/> <a href="https://github.com/DanielOliveiraSouza/LabsTweakTool/LICENSE.md"><img src="https://img.shields.io/github/license/danieloliveirasouza/LabsTweakTool"/></a>
 </p>
 
 Labs Tweak tool
